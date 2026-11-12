@@ -112,12 +112,13 @@
         </div>
       </div>
 
-      <!-- ナビゲーションタブ（閲覧者向け4タブ。運営入力はフッターの小さなリンクから） -->
-      <nav class="grid grid-cols-4">
+      <!-- ナビゲーションタブ（閲覧者向け5タブ。運営入力はフッターの小さなリンクから） -->
+      <nav class="grid grid-cols-5">
         <button onclick="switchTab('live')" id="tab-btn-live" class="nav-tab active"><span class="en">LIVE</span><span class="ja">卓状況</span></button>
-        <button onclick="switchTab('ranking')" id="tab-btn-ranking" class="nav-tab"><span class="en">RANKING</span><span class="ja">ランキング</span></button>
-        <button onclick="switchTab('logs')" id="tab-btn-logs" class="nav-tab"><span class="en">GAMES</span><span class="ja">対局＆動画</span></button>
-        <button onclick="switchTab('profile')" id="tab-btn-profile" class="nav-tab"><span class="en">PLAYER</span><span class="ja">個人成績</span></button>
+        <button onclick="switchTab('ranking')" id="tab-btn-ranking" class="nav-tab"><span class="en">RANKING</span><span class="ja">成績</span></button>
+        <button onclick="switchTab('logs')" id="tab-btn-logs" class="nav-tab"><span class="en">GAMES</span><span class="ja">対局・動画</span></button>
+        <button onclick="switchTab('profile')" id="tab-btn-profile" class="nav-tab"><span class="en">PLAYER</span><span class="ja">個人</span></button>
+        <button onclick="switchTab('rules')" id="tab-btn-rules" class="nav-tab"><span class="en">RULES</span><span class="ja">ルール</span></button>
       </nav>
     </header>
 
@@ -377,6 +378,76 @@
         </div>
       </section>
 
+      <!-- ==================== TAB: ルール・参加案内 ==================== -->
+      <section id="tab-rules" class="hidden space-y-3">
+        <div class="cafe-card-yellow p-4 space-y-1">
+          <div class="font-en text-[10px] tracking-[0.22em] text-[#D9472B]">JPML OFFICIAL RULES</div>
+          <h2 class="text-base font-extrabold">ルール・参加案内</h2>
+          <p class="text-xs text-[#4B5A52] font-bold">日本プロ麻雀連盟 公式ルールに準拠しています。練習会独自の取り決めもここにまとめています。</p>
+        </div>
+
+        <div class="cafe-card p-3.5 space-y-2">
+          <div class="flex items-baseline justify-between">
+            <div class="text-sm font-extrabold">参加について</div>
+            <div class="font-en text-[10px] tracking-[0.18em] text-[#5B6B62]">ENTRY</div>
+          </div>
+          <dl class="text-xs grid grid-cols-12 gap-y-2">
+            <dt class="col-span-3 font-bold text-[#5B6B62]">料金</dt>
+            <dd class="col-span-9 font-extrabold">1半荘 500円<span class="font-bold text-[#4B5A52]">（プロ・女性は 400円）</span></dd>
+            <dt class="col-span-3 font-bold text-[#5B6B62]">時間</dt>
+            <dd class="col-span-9 font-extrabold">50分打ち切り＋1局</dd>
+            <dt class="col-span-3 font-bold text-[#5B6B62]">参加</dt>
+            <dd class="col-span-9 font-extrabold">1半荘から参加できます</dd>
+            <dt class="col-span-3 font-bold text-[#5B6B62]">撮影</dt>
+            <dd class="col-span-9 font-bold">第1卓は撮影卓です。対局動画は「対局・動画」タブで公開します</dd>
+          </dl>
+        </div>
+
+        <div class="cafe-card p-3.5 space-y-2">
+          <div class="flex items-baseline justify-between">
+            <div class="text-sm font-extrabold">主なルール</div>
+            <div class="font-en text-[10px] tracking-[0.18em] text-[#5B6B62]">RULES</div>
+          </div>
+          <ul class="text-xs space-y-1.5 font-bold">
+            <li class="flex gap-2"><span class="text-[#D9472B] font-en">01</span><span>一発・裏ドラなし</span></li>
+            <li class="flex gap-2"><span class="text-[#D9472B] font-en">02</span><span>30,000点持ち 30,000点返し</span></li>
+            <li class="flex gap-2"><span class="text-[#D9472B] font-en">03</span><span>トビ（箱下終了）なし</span></li>
+            <li class="flex gap-2"><span class="text-[#D9472B] font-en">04</span><span>チョンボは1回につき <b class="font-extrabold">▲20.0pt</b>（トータルから減算）</span></li>
+            <li class="flex gap-2"><span class="text-[#D9472B] font-en">05</span><span>流局で終わったときに残った供託リーチ棒は、誰の得点にもなりません</span></li>
+          </ul>
+        </div>
+
+        <div class="cafe-card p-3.5 space-y-2.5">
+          <div class="flex items-baseline justify-between">
+            <div class="text-sm font-extrabold">ポイント計算（順位点）</div>
+            <div class="font-en text-[10px] tracking-[0.18em] text-[#5B6B62]">SCORING</div>
+          </div>
+          <p class="text-xs font-bold text-[#4B5A52]">30,000点以上で終えた人を「浮き」と呼び、浮いた人数で順位点が変わります。<b class="text-[#14241E]">30,000点ちょうども浮き</b>です。</p>
+          <table class="w-full text-xs text-center border-collapse">
+            <thead>
+              <tr class="bg-[#0F2E25] text-[#F4EBD9]">
+                <th class="py-1.5 font-bold">浮き人数</th><th class="font-en">1着</th><th class="font-en">2着</th><th class="font-en">3着</th><th class="font-en">4着</th>
+              </tr>
+            </thead>
+            <tbody class="font-en font-bold">
+              <tr class="border-b border-[#D8CCB0]"><td class="py-1.5 font-sans">1人</td><td class="text-[#2E7D5B]">+12</td><td class="text-[#D9472B]">−4</td><td class="text-[#D9472B]">−4</td><td class="text-[#D9472B]">−4</td></tr>
+              <tr class="border-b border-[#D8CCB0]"><td class="py-1.5 font-sans">2人</td><td class="text-[#2E7D5B]">+8</td><td class="text-[#2E7D5B]">+4</td><td class="text-[#D9472B]">−4</td><td class="text-[#D9472B]">−8</td></tr>
+              <tr class="border-b border-[#D8CCB0]"><td class="py-1.5 font-sans">3人</td><td class="text-[#2E7D5B]">+4</td><td class="text-[#2E7D5B]">+4</td><td class="text-[#2E7D5B]">+4</td><td class="text-[#D9472B]">−12</td></tr>
+              <tr><td class="py-1.5 font-sans">0人・4人</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+            </tbody>
+          </table>
+          <ul class="text-xs space-y-1 font-bold text-[#4B5A52]">
+            <li>・ポイント ＝（素点 − 30,000）÷ 1,000 ＋ 順位点</li>
+            <li>・同点の人がいるときは、該当する順位点を均等に分けます</li>
+            <li>・例：浮き2人で 36,100点の1着 → +6.1 ＋ 8 ＝ <b class="text-[#2E7D5B]">+14.1pt</b></li>
+          </ul>
+        </div>
+
+        <div class="text-[11px] text-[#5B6B62] font-bold px-1">
+          ここにない細かい規定は、日本プロ麻雀連盟の公式ルールに従います（<a href="https://www.ma-jan.or.jp/" target="_blank" rel="noopener noreferrer" class="underline">日本プロ麻雀連盟 公式サイト</a>）。
+        </div>
+      </section>
+
       <!-- ==================== TAB 4: 運営専用 スコア入力 ==================== -->
       <section id="tab-input" class="hidden space-y-3">
 
@@ -496,6 +567,18 @@
           <div id="submit-toast"
             class="hidden text-center text-xs font-extrabold text-[#2E7D5B] bg-[#EBFBEE] border border-[#B2F2BB] py-2.5 rounded-md">
              対局結果を記録しました！ランキングと履歴に反映されました！
+          </div>
+
+          <!-- 精算（運営専用） -->
+          <div class="cafe-card p-3.5 space-y-2.5">
+            <div class="flex items-center justify-between gap-2">
+              <div>
+                <div class="text-xs font-extrabold text-[#14241E]">精算（その日の半荘数 × 料金）</div>
+                <div class="text-[11px] text-[#5B6B62] font-bold">区分が「プロ連盟」「女性割」の人は自動で400円。行ごとに変更もできます</div>
+              </div>
+              <input type="date" id="settle-date" onchange="renderSettlement()" class="cafe-input px-2 py-1 text-xs font-extrabold shrink-0">
+            </div>
+            <div id="settle-list" class="space-y-1"></div>
           </div>
 
           <!-- 新規プレイヤー登録カード -->
@@ -716,27 +799,101 @@
       }
     }
 
-    // 期間フィルターの選択肢更新
+    // 期間フィルターの選択肢更新（開催日ごと・月ごと・通算）
+    let periodFilterInitialized = false;
+    function todayIso() {
+      const d = new Date();
+      return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+    }
     function populatePeriodFilter() {
       const sel = document.getElementById('period-filter');
-      const current = sel.value || 'all';
+      let current = sel.value || 'all';
       const months = new Set();
+      const days = new Set();
       appData.gameLogs.forEach(g => {
-        if (g.dateIso && g.dateIso.length >= 7) {
-          months.add(g.dateIso.slice(0, 7));
-        }
+        if (g.dateIso && g.dateIso.length >= 10) days.add(g.dateIso.slice(0, 10));
+        if (g.dateIso && g.dateIso.length >= 7) months.add(g.dateIso.slice(0, 7));
       });
+      // 開催当日に初めて開いたときは「今日」の成績を最初に見せる
+      if (!periodFilterInitialized && days.has(todayIso())) current = 'day:' + todayIso();
+      periodFilterInitialized = true;
+      const sortedDays = Array.from(days).sort().reverse().slice(0, 12);
       const sortedMonths = Array.from(months).sort().reverse();
-      sel.innerHTML = `<option value="all">全期間（通算）</option>` +
-        sortedMonths.map(m => {
+      const wd = ['日', '月', '火', '水', '木', '金', '土'];
+      const opt = (v, label) => `<option value="${v}" ${v === current ? 'selected' : ''}>${label}</option>`;
+      sel.innerHTML = opt('all', '全期間（通算）') +
+        (sortedDays.length ? `<optgroup label="開催日ごと">` + sortedDays.map(d => {
+          const dt = new Date(d + 'T00:00:00');
+          const label = `${dt.getMonth() + 1}/${dt.getDate()}（${wd[dt.getDay()]}）${d === todayIso() ? ' 本日' : ''}`;
+          return opt('day:' + d, label);
+        }).join('') + `</optgroup>` : '') +
+        (sortedMonths.length ? `<optgroup label="月ごと">` + sortedMonths.map(m => {
           const [y, mo] = m.split('-');
-          return `<option value="${m}" ${m === current ? 'selected' : ''}>${y}年${parseInt(mo, 10)}月</option>`;
-        }).join('');
+          return opt(m, `${y}年${parseInt(mo, 10)}月`);
+        }).join('') + `</optgroup>` : '');
+    }
+
+    // =========================================================================
+    // 精算（運営専用）：その日の半荘数 × 料金
+    // =========================================================================
+    const FEE_NORMAL = 500;
+    const FEE_DISCOUNT = 400;
+    const DISCOUNT_BADGES = ['プロ連盟', '女性割'];
+    const settleFeeOverrides = {}; // { 'YYYY-MM-DD|名前': 400 } 画面上での一時的な変更
+
+    function renderSettlement() {
+      const listEl = document.getElementById('settle-list');
+      const dateEl = document.getElementById('settle-date');
+      if (!listEl || !dateEl) return;
+      if (!dateEl.value) dateEl.value = todayIso();
+      const day = dateEl.value;
+      const map = {};
+      appData.gameLogs.filter(g => (g.dateIso || '').slice(0, 10) === day).forEach(g => {
+        g.results.forEach(r => {
+          const m = map[r.name] || (map[r.name] = { name: r.name, games: 0, pt: 0 });
+          m.games += 1;
+          m.pt = Math.round((m.pt + r.pt) * 10) / 10;
+        });
+      });
+      const rows = Object.values(map).sort((a, b) => a.name.localeCompare(b.name, 'ja'));
+      if (rows.length === 0) {
+        listEl.innerHTML = `<div class="text-xs text-[#5B6B62] py-1">この日の対局記録はありません</div>`;
+        return;
+      }
+      let totalGames = 0, totalYen = 0;
+      const html = rows.map(r => {
+        const meta = getPlayerMeta(r.name);
+        const key = `${day}|${r.name}`;
+        const fee = settleFeeOverrides[key] || (DISCOUNT_BADGES.includes(meta.badge) ? FEE_DISCOUNT : FEE_NORMAL);
+        const yen = fee * r.games;
+        totalGames += r.games;
+        totalYen += yen;
+        const safeName = r.name.replace(/'/g, "\\'");
+        return `
+          <div class="grid grid-cols-12 gap-1 items-center px-2 py-1.5 rounded bg-[#FBF6EA] border border-[#D8CCB0] text-xs">
+            <div class="col-span-4 font-extrabold truncate">${r.name}<div class="text-[10px] font-bold text-[#5B6B62]">${meta.badge}</div></div>
+            <div class="col-span-2 text-center font-en font-bold">${r.games}<span class="font-sans text-[10px]">半荘</span></div>
+            <div class="col-span-3 text-center">
+              <select onchange="settleFeeOverrides['${day}|${safeName}']=Number(this.value);renderSettlement()" class="cafe-input px-1 py-0.5 text-[11px] font-bold">
+                <option value="${FEE_NORMAL}" ${fee === FEE_NORMAL ? 'selected' : ''}>${FEE_NORMAL}円</option>
+                <option value="${FEE_DISCOUNT}" ${fee === FEE_DISCOUNT ? 'selected' : ''}>${FEE_DISCOUNT}円</option>
+              </select>
+            </div>
+            <div class="col-span-3 text-right font-en text-sm font-bold">${yen.toLocaleString()}<span class="font-sans text-[10px]">円</span></div>
+          </div>
+        `;
+      }).join('');
+      listEl.innerHTML = html + `
+        <div class="flex items-center justify-between px-2 pt-2 mt-1 border-t-2 border-[#14241E] text-xs font-extrabold">
+          <span>合計 ${rows.length}名・のべ${totalGames}半荘</span>
+          <span class="font-en text-base">${totalYen.toLocaleString()}<span class="font-sans text-[11px]">円</span></span>
+        </div>
+      `;
     }
 
     // タブ切り替え
     function switchTab(tabName) {
-      ['live', 'ranking', 'logs', 'profile', 'input'].forEach(t => {
+      ['live', 'ranking', 'logs', 'profile', 'rules', 'input'].forEach(t => {
         const sec = document.getElementById('tab-' + t);
         if (sec) sec.classList.toggle('hidden', t !== tabName);
         const btn = document.getElementById('tab-btn-' + t);
@@ -784,6 +941,7 @@
       document.getElementById('admin-tab-icon').textContent = ' ON';
       renderLiveStatus(); // 卓状況の運営編集UIを表示
       renderLogs(); // 動画編集ボタンを表示するため再描画
+      renderSettlement();
     }
 
     // =========================================================================
@@ -1587,6 +1745,7 @@
 
     function onAfterGameSaved() {
       populatePeriodFilter();
+      renderSettlement();
       renderRanking();
       renderLogs();
       renderProfile();
@@ -1679,7 +1838,9 @@
 
       const filteredLogs = periodValue === 'all'
         ? appData.gameLogs
-        : appData.gameLogs.filter(g => (g.dateIso || '').startsWith(periodValue));
+        : periodValue.startsWith('day:')
+          ? appData.gameLogs.filter(g => (g.dateIso || '').slice(0, 10) === periodValue.slice(4))
+          : appData.gameLogs.filter(g => (g.dateIso || '').startsWith(periodValue));
 
       filteredLogs.forEach(log => {
         log.results.forEach(r => {
