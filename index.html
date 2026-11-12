@@ -292,10 +292,6 @@
         <div class="cafe-card-yellow p-4 space-y-3.5 relative overflow-hidden">
           <div class="flex items-center justify-between">
             <div class="flex items-center gap-2.5">
-              <div id="prof-avatar"
-                class="w-12 h-12 rounded-md bg-white border-2 border-[#14241E] flex items-center justify-center text-2xl shadow-sm">
-                
-              </div>
               <div>
                 <div class="flex items-center gap-1.5">
                   <h3 id="prof-name" class="text-base font-extrabold text-[#14241E]">-</h3>
@@ -330,14 +326,19 @@
             </div>
           </div>
 
-          <div class="grid grid-cols-2 gap-2">
-            <div class="bg-white/90 border border-[#C9B998] rounded-md p-2 flex items-center justify-between px-3">
-              <span class="text-xs text-[#5B6B62] font-bold">平均pt</span>
-              <span id="prof-avg-pt" class="text-xs font-extrabold text-[#14241E]">0.0pt</span>
+          <div class="grid grid-cols-3 gap-2">
+            <div class="bg-white/90 border border-[#C9B998] rounded-md p-2 text-center">
+              <div class="text-xs text-[#5B6B62] font-bold">平均pt</div>
+              <div id="prof-avg-pt" class="text-sm font-extrabold text-[#14241E] mt-0.5">0.0pt</div>
             </div>
-            <div class="bg-white/90 border border-[#C9B998] rounded-md p-2 flex items-center justify-between px-3">
-              <span class="text-xs text-[#5B6B62] font-bold">最高素点</span>
-              <span id="prof-max-score" class="text-xs font-extrabold text-[#14241E]">-</span>
+            <div class="bg-white/90 border border-[#C9B998] rounded-md p-2 text-center">
+              <div class="text-xs text-[#5B6B62] font-bold">浮き率</div>
+              <div id="prof-uki" class="text-sm font-extrabold text-[#14241E] mt-0.5">-</div>
+              <div id="prof-uki-sub" class="text-[10px] text-[#5B6B62] font-bold">30,000点以上</div>
+            </div>
+            <div class="bg-white/90 border border-[#C9B998] rounded-md p-2 text-center">
+              <div class="text-xs text-[#5B6B62] font-bold">最高素点</div>
+              <div id="prof-max-score" class="text-sm font-extrabold text-[#14241E] mt-0.5">-</div>
             </div>
           </div>
 
@@ -358,6 +359,15 @@
             <pre id="share-text-content"
               class="whitespace-pre-wrap font-sans text-[#14241E] bg-[#FBF6EA] p-2 rounded border border-[#D8CCB0]"></pre>
           </div>
+        </div>
+
+        <!-- 対戦相手ごとの成績 -->
+        <div class="cafe-card p-3.5 space-y-1.5">
+          <div class="flex items-baseline justify-between">
+            <div class="text-xs font-extrabold text-[#14241E]">対戦相手別の成績</div>
+            <div class="font-en text-[10px] tracking-[0.18em] text-[#5B6B62]">HEAD TO HEAD</div>
+          </div>
+          <div id="prof-h2h" class="space-y-1"></div>
         </div>
 
         <!-- 個人の直近対局履歴 -->
@@ -1662,6 +1672,7 @@
           totalPt: 0,
           totalScore: 0,
           maxScore: -999999,
+          ukiCount: 0,
           ranks: [0, 0, 0, 0]
         };
       });
@@ -1673,12 +1684,13 @@
       filteredLogs.forEach(log => {
         log.results.forEach(r => {
           if (!map[r.name]) {
-            map[r.name] = { name: r.name, games: 0, totalPt: 0, totalScore: 0, maxScore: -999999, ranks: [0, 0, 0, 0] };
+            map[r.name] = { name: r.name, games: 0, totalPt: 0, totalScore: 0, maxScore: -999999, ukiCount: 0, ranks: [0, 0, 0, 0] };
           }
           const st = map[r.name];
           st.games += 1;
           st.totalPt = Math.round((st.totalPt + r.pt) * 10) / 10;
           st.totalScore += r.score;
+          if (r.score >= 30000) st.ukiCount += 1; // 30,000点ちょうども浮き
           if (r.score > st.maxScore) st.maxScore = r.score;
           const rIdx = Math.min(3, Math.max(0, (r.rank || 1) - 1));
           st.ranks[rIdx] += 1;
@@ -1690,8 +1702,62 @@
         const avgRank = ((p.ranks[0] * 1 + p.ranks[1] * 2 + p.ranks[2] * 3 + p.ranks[3] * 4) / p.games).toFixed(2);
         const avgScore = Math.round(p.totalScore / p.games);
         const rentai = (((p.ranks[0] + p.ranks[1]) / p.games) * 100).toFixed(1);
-        return { ...p, avgPt, avgRank, avgScore, rentai };
+        const ukiRate = ((p.ukiCount / p.games) * 100).toFixed(1);
+        return { ...p, avgPt, avgRank, avgScore, rentai, ukiRate };
       });
+    }
+
+    // 対戦相手ごとの成績（同卓した半荘だけを集計）
+    function computeHeadToHead(myName) {
+      const map = {};
+      appData.gameLogs.forEach(g => {
+        const me = g.results.find(r => r.name === myName);
+        if (!me) return;
+        g.results.forEach(op => {
+          if (op.name === myName) return;
+          const h = map[op.name] || (map[op.name] = { name: op.name, games: 0, win: 0, lose: 0, draw: 0, myPt: 0, opPt: 0 });
+          h.games += 1;
+          if (me.rank < op.rank) h.win += 1;
+          else if (me.rank > op.rank) h.lose += 1;
+          else h.draw += 1;
+          h.myPt = Math.round((h.myPt + me.pt) * 10) / 10;
+          h.opPt = Math.round((h.opPt + op.pt) * 10) / 10;
+        });
+      });
+      return Object.values(map).sort((a, b) => b.games - a.games || (b.win - b.lose) - (a.win - a.lose));
+    }
+
+    function renderHeadToHead(myName) {
+      const el = document.getElementById('prof-h2h');
+      if (!el) return;
+      const list = computeHeadToHead(myName);
+      if (list.length === 0) {
+        el.innerHTML = `<div class="text-xs text-[#5B6B62] py-1">まだ同卓した相手がいません</div>`;
+        return;
+      }
+      const fmt = v => `${v > 0 ? '+' : ''}${v.toFixed(1)}`;
+      el.innerHTML = `
+        <div class="grid grid-cols-12 gap-1 px-2 pb-1 text-[11px] font-bold text-[#5B6B62]">
+          <div class="col-span-4">相手</div>
+          <div class="col-span-2 text-center">同卓</div>
+          <div class="col-span-3 text-center">勝-負(分)</div>
+          <div class="col-span-3 text-right">pt差</div>
+        </div>
+        ${list.map(h => {
+          const diff = Math.round((h.myPt - h.opPt) * 10) / 10;
+          const rate = Math.round((h.win / h.games) * 100);
+          const col = diff >= 0 ? 'text-[#2E7D5B]' : 'text-[#D9472B]';
+          return `
+            <div onclick="openPlayerProfile('${h.name}')" class="grid grid-cols-12 gap-1 items-center px-2 py-1.5 rounded bg-[#FBF6EA] border border-[#D8CCB0] text-xs cursor-pointer hover:bg-[#F4EBD9]">
+              <div class="col-span-4 font-extrabold truncate">${h.name}</div>
+              <div class="col-span-2 text-center font-en">${h.games}</div>
+              <div class="col-span-3 text-center"><span class="font-en font-bold">${h.win}-${h.lose}</span>${h.draw ? `<span class="text-[#5B6B62]">(${h.draw})</span>` : ''}<span class="text-[10px] text-[#5B6B62] ml-1">${rate}%</span></div>
+              <div class="col-span-3 text-right font-en font-bold ${col}">${fmt(diff)}</div>
+            </div>
+          `;
+        }).join('')}
+        <div class="text-[11px] text-[#5B6B62] pt-1 px-1">※「勝」は同じ半荘で相手より上の着順だった回数。「pt差」はその半荘での自分のpt合計 − 相手のpt合計</div>
+      `;
     }
 
     function setSortMode(mode) {
@@ -1731,16 +1797,13 @@
           <div onclick="openPlayerProfile('${st.name}')" class="cafe-card p-3 flex items-center justify-between cursor-pointer hover:bg-[#FBF6EA] transition-all">
             <div class="flex items-center gap-2.5">
               <div class="w-7 text-center">${rankBadge}</div>
-              <div class="w-9 h-9 rounded-md bg-[#F2C230] border border-[#C9B998] flex items-center justify-center text-lg">
-                ${meta.icon}
-              </div>
               <div>
                 <div class="flex items-center gap-1.5">
                   <span class="text-sm font-extrabold text-[#14241E]">${st.name}</span>
                   <span class="text-xs px-1.5 py-0.5 rounded-md bg-[#E9DFC8] text-[#4B5A52] font-bold">${meta.badge}</span>
                 </div>
                 <div class="text-xs text-[#5B6B62]">
-                  ${st.games}戦 / 平均着順 ${st.avgRank} (${st.ranks.join('-')})
+                  ${st.games}戦 / 平均着順 ${st.avgRank} / 浮き率 ${st.ukiRate}%
                 </div>
               </div>
             </div>
@@ -1856,7 +1919,6 @@
       const st = stats.find(s => s.name === targetName) || stats[0];
       const meta = getPlayerMeta(st.name);
 
-      document.getElementById('prof-avatar').textContent = meta.icon;
       document.getElementById('prof-name').textContent = st.name;
       document.getElementById('prof-badge').textContent = meta.badge;
 
@@ -1871,6 +1933,9 @@
       document.getElementById('prof-rentai').textContent = `${st.rentai}%`;
       document.getElementById('prof-avg-pt').textContent = `${st.avgPt > 0 ? '+' : ''}${st.avgPt.toFixed(1)}pt`;
       document.getElementById('prof-max-score').textContent = `${st.maxScore.toLocaleString()}点`;
+      document.getElementById('prof-uki').textContent = `${st.ukiRate}%`;
+      document.getElementById('prof-uki-sub').textContent = `${st.ukiCount}/${st.games}回 30,000点以上`;
+      renderHeadToHead(st.name);
       document.getElementById('prof-rank-counts').textContent = st.ranks.join(' - ');
 
       const colors = ['bg-[#FCC419]', 'bg-[#74C0FC]', 'bg-[#B197FC]', 'bg-[#FFA8A8]'];
@@ -1885,6 +1950,7 @@ ${st.name}の成績カルテ
 ・通算：${sign}${st.totalPt.toFixed(1)}pt（${st.games}戦 / 平均${st.avgPt > 0 ? '+' : ''}${st.avgPt.toFixed(1)}pt）
 ・平均着順：${st.avgRank}（${st.ranks.join('-')}）
 ・平均素点：${st.avgScore.toLocaleString()}点（最高${st.maxScore.toLocaleString()}点）
+・浮き率：${st.ukiRate}%
 #キャナリィ練習会 #日本プロ麻雀連盟 #一宮`;
 
       // 個人の直近対局履歴
