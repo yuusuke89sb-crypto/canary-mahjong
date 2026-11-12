@@ -153,7 +153,7 @@
           <!-- 一言お知らせバー -->
           <div id="live-announcement-box"
             class="bg-white/90 border border-[#C9B998] rounded-md px-3 py-1.5 text-xs font-bold text-[#14241E] flex items-center justify-between gap-2">
-            <span id="live-announcement-text"> 18:00〜23:00 開催！飛び入り参加も大歓迎です！</span>
+            <span id="live-announcement-text">19:00〜23:00 開催！飛び入り参加も大歓迎です！</span>
             <button id="live-edit-announce-btn" onclick="editLiveAnnouncement()"
               class="hidden text-[11px] text-[#5B6B62] underline shrink-0">編集</button>
           </div>
@@ -693,7 +693,7 @@
       }
       return {
         updatedAt: '19:30',
-        announcement: '18:00〜23:00 開催！現在2卓稼働中・飛び入り参加も大歓迎です',
+        announcement: '19:00〜23:00 開催！現在2卓稼働中・飛び入り参加も大歓迎です',
         waitingList: [
           { name: 'わたなべ', note: '次卓待ち' },
           { name: 'なかむら', note: '19:45頃〜' }
@@ -1000,7 +1000,7 @@
       document.getElementById('live-stat-waiting').textContent = waitingCount;
       renderNextFree(live);
       document.getElementById('live-updated-at').textContent = `更新: ${live.updatedAt || 'さっき'}`;
-      document.getElementById('live-announcement-text').textContent = ` ${live.announcement || '18:00〜23:00 開催！飛び入り参加も大歓迎です！'}`;
+      document.getElementById('live-announcement-text').textContent = `${live.announcement || '19:00〜23:00 開催！飛び入り参加も大歓迎です！'}`;
 
       const editAnnBtn = document.getElementById('live-edit-announce-btn');
       const waitAdminCtrl = document.getElementById('admin-waiting-controls');
