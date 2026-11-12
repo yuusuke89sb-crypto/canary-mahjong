@@ -2224,7 +2224,17 @@ ${st.name}の成績カルテ
       renderRanking();
       renderLogs();
       renderProfile();
+      openTabFromHash();
     }
+
+    // URLの末尾（#rules など）で開くタブを指定できるようにする（LINEのリッチメニュー用）
+    // 例：.../canary-mahjong/#live  #ranking  #games  #player  #rules
+    function openTabFromHash() {
+      const map = { live: 'live', ranking: 'ranking', games: 'logs', logs: 'logs', player: 'profile', profile: 'profile', rules: 'rules' };
+      const key = (location.hash || '').replace('#', '').toLowerCase();
+      if (map[key]) switchTab(map[key]);
+    }
+    window.addEventListener('hashchange', openTabFromHash);
   </script>
 </body>
 
