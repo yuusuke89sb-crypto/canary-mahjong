@@ -1,0 +1,2004 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>麻雀かふぇ キャナリィ｜公式ルール練習会 成績帳</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Oswald:wght@500;700&family=Zen+Kaku+Gothic+New:wght@500;700;900&display=swap" rel="stylesheet">
+  <style>
+    /* ===== ポスターと同じ配色：深緑 × 紙色 × カナリアイエロー × 朱 ===== */
+    body {
+      background-color: #EFE6D2;
+      color: #14241E;
+      font-family: "Zen Kaku Gothic New", "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    .font-en { font-family: "Oswald", "Arial Narrow", sans-serif; letter-spacing: .04em; }
+    .font-dela { font-family: "Dela Gothic One", "Zen Kaku Gothic New", sans-serif; font-weight: 400; }
+    .font-extrabold { font-weight: 900; }
+    .font-bold { font-weight: 700; }
+
+    .cafe-card {
+      background-color: #FBF6EA;
+      border: 2px solid #14241E;
+      border-radius: 6px;
+      box-shadow: 4px 4px 0 #14241E;
+    }
+    .cafe-card-yellow {
+      background-color: #F4EBD9;
+      border: 2px solid #14241E;
+      border-radius: 6px;
+      box-shadow: 4px 4px 0 #D9472B;
+    }
+    .cafe-card-mint {
+      background-color: #E4EFE7;
+      border: 2px solid #2E7D5B;
+      border-radius: 6px;
+      box-shadow: 4px 4px 0 #2E7D5B;
+    }
+    .cafe-btn-primary {
+      background-color: #F2C230;
+      color: #14241E;
+      border: 2px solid #14241E;
+      box-shadow: 3px 3px 0 #14241E;
+      transition: all 0.1s ease;
+    }
+    .cafe-btn-primary:active { transform: translate(2px, 2px); box-shadow: 1px 1px 0 #14241E; }
+    .cafe-btn-sub {
+      background-color: #FBF6EA;
+      color: #14241E;
+      border: 2px solid #14241E;
+      box-shadow: 2px 2px 0 #14241E;
+      transition: all 0.1s ease;
+    }
+    .cafe-btn-sub:active { transform: translate(1px, 1px); box-shadow: 1px 1px 0 #14241E; }
+    .cafe-input {
+      background-color: #FFFDF8;
+      border: 2px solid #C9B998;
+      color: #14241E;
+      border-radius: 4px;
+    }
+    .cafe-input:focus { outline: none; border-color: #2E7D5B; background-color: #FFFFFF; }
+
+    /* ヘッダーのタブ */
+    .nav-tab {
+      padding: 8px 2px 9px;
+      display: flex; flex-direction: column; align-items: center; gap: 1px;
+      color: rgba(244, 235, 217, .62);
+      border-bottom: 4px solid transparent;
+      transition: color .15s, border-color .15s;
+    }
+    .nav-tab .en { font-family: "Oswald", sans-serif; font-size: 10px; letter-spacing: .18em; font-weight: 500; }
+    .nav-tab .ja { font-size: 12px; font-weight: 900; }
+    .nav-tab.active { color: #F2C230; border-bottom-color: #F2C230; }
+  </style>
+
+</head>
+
+<body class="min-h-screen flex flex-col items-center pb-10">
+
+  <!-- アプリ全体コンテナ（スマホ最適化・PCでも見やすい中央配置） -->
+  <div class="w-full max-w-md min-h-screen flex flex-col">
+
+    <!-- アプリヘッダー（ポスターと同じ黒猫×カナリアのロゴ） -->
+    <header class="bg-[#0F2E25] text-[#F4EBD9] px-4 pt-3 sticky top-0 z-20 shadow-[0_3px_0_#D9472B]">
+      <div class="flex items-center gap-3 pb-1">
+        <svg viewBox="0 0 120 120" class="w-12 h-12 shrink-0" aria-hidden="true">
+          <circle cx="62" cy="58" r="52" fill="#F4EBD9" />
+          <g transform="translate(-86.8 -20.4) scale(0.2)">
+            <path transform="translate(10 8)" fill="#D9472B" d="M700 300 C706 288 716 276 730 268 L742 202 L772 250 L806 206 L816 266 C826 292 832 318 840 340 C870 380 900 440 908 520 C914 580 900 625 872 640 L722 640 C716 610 728 560 738 520 C746 470 746 410 736 370 C730 348 722 330 712 322 C706 316 700 312 698 306 Z" />
+            <path fill="#111" d="M700 300 C706 288 716 276 730 268 L742 202 L772 250 L806 206 L816 266 C826 292 832 318 840 340 C870 380 900 440 908 520 C914 580 900 625 872 640 L722 640 C716 610 728 560 738 520 C746 470 746 410 736 370 C730 348 722 330 712 322 C706 316 700 312 698 306 Z" />
+            <path d="M724 286 Q736 276 748 284 Q736 292 724 286 Z" fill="#F2C230" />
+            <g stroke="#111" stroke-width="5" stroke-linejoin="round" transform="translate(-36 -14)">
+              <path d="M605 240 C620 262 646 274 684 278 C658 262 642 250 628 240 Z" fill="#D9A21B" />
+              <path d="M646 236 L694 222 L688 248 Z" fill="#D9A21B" />
+              <path d="M556 240 C578 226 622 226 652 236 C640 248 598 254 556 240 Z" fill="#F2C230" />
+              <circle cx="566" cy="236" r="12" fill="#F2C230" />
+              <path d="M596 236 C604 196 636 168 694 156 C668 184 652 212 634 236 Z" fill="#F2C230" />
+            </g>
+          </g>
+        </svg>
+        <div class="min-w-0">
+          <div class="font-en text-[10px] tracking-[0.22em] text-[#F2C230]">JPML OFFICIAL RULES · ICHINOMIYA</div>
+          <h1 class="leading-tight mt-0.5">
+            <span class="font-dela text-[22px] text-[#F4EBD9]">練習会</span>
+            <span class="text-[13px] font-extrabold text-[#F4EBD9] ml-1">成績帳</span>
+          </h1>
+          <div class="text-[11px] font-bold text-[#C9B998]">麻雀かふぇ キャナリィ／連盟公式ルール</div>
+        </div>
+      </div>
+
+      <!-- ナビゲーションタブ（閲覧者向け4タブ。運営入力はフッターの小さなリンクから） -->
+      <nav class="grid grid-cols-4">
+        <button onclick="switchTab('live')" id="tab-btn-live" class="nav-tab active"><span class="en">LIVE</span><span class="ja">卓状況</span></button>
+        <button onclick="switchTab('ranking')" id="tab-btn-ranking" class="nav-tab"><span class="en">RANKING</span><span class="ja">ランキング</span></button>
+        <button onclick="switchTab('logs')" id="tab-btn-logs" class="nav-tab"><span class="en">GAMES</span><span class="ja">対局＆動画</span></button>
+        <button onclick="switchTab('profile')" id="tab-btn-profile" class="nav-tab"><span class="en">PLAYER</span><span class="ja">個人成績</span></button>
+      </nav>
+    </header>
+
+
+    <!-- 通信中インジケーター -->
+    <div id="loading-bar"
+      class="hidden bg-[#F4EBD9] border-b border-[#C9B998] px-4 py-2 text-center text-xs font-bold text-[#14241E]">
+       データを読み込んでいます...
+    </div>
+
+    <!-- メインコンテンツ領域 -->
+    <main class="p-3.5 space-y-3.5 flex-1">
+
+      <!-- ==================== TAB 0: リアルタイム卓状況（最大7卓＋待機リスト） ==================== -->
+      <section id="tab-live" class="space-y-3">
+        <!-- リアルタイムサマリー看板 -->
+        <div class="cafe-card-yellow p-3.5 space-y-2.5">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-1.5">
+              <span class="inline-block w-2.5 h-2.5 rounded-full bg-[#2E7D5B] animate-pulse"></span>
+              <span class="text-xs font-extrabold text-[#14241E]">本日のリアルタイム卓状況（最大7卓）</span>
+            </div>
+            <div class="flex items-center gap-1.5">
+              <span id="live-updated-at" class="text-[11px] font-bold text-[#5B6B62]">更新: --:--</span>
+              <button onclick="refreshLiveFromServer()"
+                class="px-2 py-0.5 rounded bg-white border border-[#C9B998] text-[11px] font-extrabold text-[#14241E] shadow-sm active:translate-y-0.5">
+                 更新
+              </button>
+            </div>
+          </div>
+
+          <!-- 一言お知らせバー -->
+          <div id="live-announcement-box"
+            class="bg-white/90 border border-[#C9B998] rounded-md px-3 py-1.5 text-xs font-bold text-[#14241E] flex items-center justify-between gap-2">
+            <span id="live-announcement-text"> 18:00〜23:00 開催！飛び入り参加も大歓迎です！</span>
+            <button id="live-edit-announce-btn" onclick="editLiveAnnouncement()"
+              class="hidden text-[11px] text-[#5B6B62] underline shrink-0">編集</button>
+          </div>
+
+          <!-- 4つの主要カウンター -->
+          <div class="grid grid-cols-4 gap-1.5">
+            <div class="bg-white border-2 border-[#14241E] rounded-md p-2 text-center shadow-[0_2px_0_#14241E]">
+              <div class="text-[10px] font-bold text-[#5B6B62]">稼働中</div>
+              <div class="text-base font-extrabold text-[#2E7D5B] mt-0.5"><span id="live-stat-tables">0</span><span
+                  class="text-xs font-bold text-[#14241E]"> / 7卓</span></div>
+            </div>
+            <div class="bg-white border border-[#C9B998] rounded-md p-2 text-center">
+              <div class="text-[10px] font-bold text-[#5B6B62]">対局中</div>
+              <div class="text-base font-extrabold text-[#14241E] mt-0.5"><span id="live-stat-playing">0</span><span
+                  class="text-xs">名</span></div>
+            </div>
+            <div class="bg-[#FFE3E3] border border-[#FFA8A8] rounded-md p-2 text-center">
+              <div class="text-[10px] font-extrabold text-[#B93A22]">ラス半</div>
+              <div class="text-base font-extrabold text-[#B93A22] mt-0.5"><span id="live-stat-lasthan">0</span><span
+                  class="text-xs">名</span></div>
+            </div>
+            <div class="bg-[#E7F5FF] border border-[#74C0FC] rounded-md p-2 text-center">
+              <div class="text-[10px] font-extrabold text-[#1971C2]">待機中</div>
+              <div class="text-base font-extrabold text-[#1971C2] mt-0.5"><span id="live-stat-waiting">0</span><span
+                  class="text-xs">名</span></div>
+            </div>
+          </div>
+
+          <!-- 次に空きそうな卓（待っている人向け） -->
+          <div id="live-next-free"
+            class="hidden bg-white/90 border border-[#C9B998] rounded-md px-3 py-1.5 text-xs font-bold text-[#14241E]"></div>
+        </div>
+
+        <!-- 待機中（次卓待ち・休憩中）リスト -->
+        <div class="cafe-card p-3.5 space-y-2">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-1.5">
+              <div>
+                <div class="text-xs font-extrabold text-[#14241E]">待機中・次卓ご案内待ちメンバー</div>
+                <div class="text-[11px] text-[#5B6B62]">4名揃うか空き卓が出次第、順番にご案内します</div>
+              </div>
+            </div>
+            <span id="waiting-ready-badge"
+              class="hidden text-[11px] font-extrabold px-2 py-0.5 rounded-full bg-[#2E7D5B] text-white">新卓立卓OK!</span>
+          </div>
+
+          <div id="live-waiting-list" class="flex flex-wrap gap-1.5 pt-0.5"></div>
+
+          <!-- 運営専用：待機メンバー追加フォーム -->
+          <div id="admin-waiting-controls" class="hidden pt-2 border-t border-dashed border-[#D8CCB0] space-y-1.5">
+            <div class="text-[11px] font-extrabold text-[#5B6B62]"> 運営操作：待機リストに人を追加</div>
+            <div class="flex items-center gap-1.5">
+              <select id="waiting-select-player" class="cafe-input px-2 py-1.5 text-xs font-bold flex-1"></select>
+              <input type="text" id="waiting-custom-name" placeholder="または直接入力"
+                class="cafe-input px-2 py-1.5 text-xs font-bold w-28">
+              <button onclick="addWaitingPlayer()"
+                class="cafe-btn-primary px-3 py-1.5 rounded-md text-xs font-extrabold shrink-0">＋追加</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 運営モード切り替え案内バー -->
+        <div class="flex items-center justify-between px-1">
+          <div class="text-xs font-extrabold text-[#14241E]"> 各卓のリアルタイム状況（全7卓）</div>
+          <button onclick="toggleEmptyTables()" id="toggle-empty-tables-btn"
+            class="text-[11px] font-bold text-[#5B6B62] underline">
+            空き卓もすべて表示する
+          </button>
+        </div>
+
+        <!-- 卓カード一覧（1番卓〜7番卓） -->
+        <div id="live-tables-container" class="space-y-2.5"></div>
+
+        <!-- 運営未ログイン時のワンタップ案内 -->
+        <div id="live-admin-hint" class="hidden cafe-card p-3 flex items-center justify-between bg-[#FBF6EA]">
+          <div class="text-xs text-[#5B6B62]">
+             運営スタッフの方はロック解除すると、この画面で卓メンバー配置・ラス半フラグ切替ができます
+          </div>
+          <button onclick="switchTab('input')"
+            class="cafe-btn-sub px-2.5 py-1.5 rounded-md text-xs font-extrabold shrink-0 ml-2">
+            運営解除へ
+          </button>
+        </div>
+      </section>
+
+      <!-- ==================== TAB 1: ランキング ==================== -->
+      <section id="tab-ranking" class="hidden space-y-3">
+        <div class="cafe-card p-3.5 space-y-2.5">
+          <div class="flex items-center justify-between gap-2">
+            <div class="flex items-center gap-1.5">
+              <span class="text-xs font-extrabold text-[#14241E]">成績ランキング</span>
+            </div>
+            <!-- 期間フィルター -->
+            <select id="period-filter" onchange="renderRanking()" class="cafe-input px-2.5 py-1 text-xs font-bold">
+              <option value="all">全期間（通算）</option>
+            </select>
+          </div>
+
+          <div class="grid grid-cols-2 gap-1.5 bg-[#E9DFC8] p-1 rounded-md">
+            <button onclick="setSortMode('total')" id="sort-total-btn"
+              class="py-1.5 rounded text-xs font-extrabold bg-white text-[#14241E] shadow-sm transition-all">
+               合計ポイント順
+            </button>
+            <button onclick="setSortMode('avg')" id="sort-avg-btn"
+              class="py-1.5 rounded text-xs font-bold text-[#5B6B62] transition-all">
+               平均ポイント順
+            </button>
+          </div>
+          <p class="text-xs text-[#5B6B62]">※名前をタップすると詳しい個人カルテが見られます</p>
+        </div>
+
+        <div id="ranking-list" class="space-y-2"></div>
+      </section>
+
+      <!-- ==================== TAB 2: 対局ログ＆動画 ==================== -->
+      <section id="tab-logs" class="hidden space-y-3">
+        <div class="cafe-card p-3.5 flex items-center justify-between">
+          <div>
+            <div class="text-xs font-extrabold text-[#14241E] flex items-center gap-1">
+              対局ログ＆録画アーカイブ
+            </div>
+            <div class="text-xs text-[#5B6B62] mt-0.5">撮影卓（1番卓）の半荘は動画ボタンからすぐ見返せます！</div>
+          </div>
+          </div>
+
+        <div id="logs-list" class="space-y-2.5"></div>
+      </section>
+
+      <!-- ==================== TAB 3: 個人カルテ ==================== -->
+      <section id="tab-profile" class="hidden space-y-3">
+        <div class="cafe-card p-3 flex items-center justify-between gap-2">
+          <span class="text-xs font-extrabold text-[#14241E] shrink-0"> プレイヤー選択:</span>
+          <select id="profile-player-select" onchange="renderProfile()"
+            class="cafe-input w-full px-2.5 py-1.5 text-xs font-extrabold"></select>
+        </div>
+
+        <div class="cafe-card-yellow p-4 space-y-3.5 relative overflow-hidden">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2.5">
+              <div id="prof-avatar"
+                class="w-12 h-12 rounded-md bg-white border-2 border-[#14241E] flex items-center justify-center text-2xl shadow-sm">
+                
+              </div>
+              <div>
+                <div class="flex items-center gap-1.5">
+                  <h3 id="prof-name" class="text-base font-extrabold text-[#14241E]">-</h3>
+                  <span id="prof-badge"
+                    class="text-xs font-bold px-2 py-0.5 rounded-full bg-[#14241E] text-[#F4EBD9]">-</span>
+                </div>
+                <p class="text-xs text-[#14241E] font-bold mt-0.5">麻雀かふぇ キャナリィ 公式ルール練習会</p>
+              </div>
+            </div>
+            <div class="text-right">
+              <div class="text-xs font-bold text-[#14241E]">通算ポイント</div>
+              <div id="prof-total-pt" class="text-xl font-extrabold text-[#2E7D5B]">0.0pt</div>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-4 gap-2">
+            <div class="bg-white/90 border border-[#C9B998] rounded-md p-2 text-center">
+              <div class="text-xs text-[#5B6B62] font-bold">打荘数</div>
+              <div id="prof-games" class="text-sm font-extrabold text-[#14241E] mt-0.5">0戦</div>
+            </div>
+            <div class="bg-white/90 border border-[#C9B998] rounded-md p-2 text-center">
+              <div class="text-xs text-[#5B6B62] font-bold">平均着順</div>
+              <div id="prof-avg-rank" class="text-sm font-extrabold text-[#14241E] mt-0.5">-</div>
+            </div>
+            <div class="bg-white/90 border border-[#C9B998] rounded-md p-2 text-center">
+              <div class="text-xs text-[#5B6B62] font-bold">平均素点</div>
+              <div id="prof-avg-score" class="text-sm font-extrabold text-[#14241E] mt-0.5">-</div>
+            </div>
+            <div class="bg-white/90 border border-[#C9B998] rounded-md p-2 text-center">
+              <div class="text-xs text-[#5B6B62] font-bold">連対率</div>
+              <div id="prof-rentai" class="text-sm font-extrabold text-[#14241E] mt-0.5">-</div>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-2">
+            <div class="bg-white/90 border border-[#C9B998] rounded-md p-2 flex items-center justify-between px-3">
+              <span class="text-xs text-[#5B6B62] font-bold">平均pt</span>
+              <span id="prof-avg-pt" class="text-xs font-extrabold text-[#14241E]">0.0pt</span>
+            </div>
+            <div class="bg-white/90 border border-[#C9B998] rounded-md p-2 flex items-center justify-between px-3">
+              <span class="text-xs text-[#5B6B62] font-bold">最高素点</span>
+              <span id="prof-max-score" class="text-xs font-extrabold text-[#14241E]">-</span>
+            </div>
+          </div>
+
+          <div class="bg-white/90 border border-[#C9B998] rounded-md p-2.5 space-y-1.5">
+            <div class="flex justify-between text-xs font-bold text-[#4B5A52]">
+              <span>着順分布（1着 - 2着 - 3着 - 4着）</span>
+              <span id="prof-rank-counts">0 - 0 - 0 - 0</span>
+            </div>
+            <div id="prof-rank-bar" class="w-full h-3 rounded-full overflow-hidden flex bg-[#D8CCB0]"></div>
+          </div>
+
+          <button onclick="copyShareText()"
+            class="cafe-btn-primary w-full py-2.5 rounded-md font-extrabold text-xs flex items-center justify-center gap-1.5">
+            <span> X（旧Twitter）用戦績テキストをコピー</span>
+          </button>
+          <div id="share-preview-box" class="bg-white border-2 border-[#D8CCB0] rounded-md p-2.5 text-xs space-y-1">
+            <div id="copy-status-msg" class="font-bold text-[#5B6B62]"> 戦績テキストプレビュー：</div>
+            <pre id="share-text-content"
+              class="whitespace-pre-wrap font-sans text-[#14241E] bg-[#FBF6EA] p-2 rounded border border-[#D8CCB0]"></pre>
+          </div>
+        </div>
+
+        <!-- 個人の直近対局履歴 -->
+        <div class="cafe-card p-3.5 space-y-2">
+          <div class="text-xs font-extrabold text-[#14241E]"> このプレイヤーの直近対局</div>
+          <div id="prof-recent-logs" class="space-y-1.5"></div>
+        </div>
+      </section>
+
+      <!-- ==================== TAB 4: 運営専用 スコア入力 ==================== -->
+      <section id="tab-input" class="hidden space-y-3">
+
+        <!-- パスワード未認証時のロック画面 -->
+        <div id="admin-login-card" class="cafe-card p-5 space-y-3 text-center">
+          <h2 class="text-sm font-extrabold text-[#14241E]">運営スタッフ専用ページ</h2>
+          <p class="text-xs text-[#5B6B62]">
+            対局結果の入力や新規プレイヤーの追加は、運営パスワードを入力してロックを解除してください。
+          </p>
+          <div class="flex items-center justify-center gap-2 pt-1">
+            <input type="password" id="admin-pass-input" placeholder="運営パスワード"
+              onkeydown="if(event.key==='Enter') unlockAdmin()"
+              class="cafe-input px-3 py-2 text-sm font-extrabold text-center w-40">
+            <button onclick="unlockAdmin()" class="cafe-btn-primary px-4 py-2 rounded-md text-xs font-extrabold">
+              解除する
+            </button>
+          </div>
+          <p id="admin-login-err" class="hidden text-xs font-extrabold text-[#D9472B]">
+            パスワードが違います
+          </p>
+        </div>
+
+        <!-- パスワード認証後の入力画面本体 -->
+        <div id="admin-Unlocked-area" class="hidden space-y-3.5">
+
+          <div class="cafe-card p-3 flex items-center justify-between bg-[#F4EBD9]">
+            <div class="flex items-center gap-2">
+              <div>
+                <div class="text-xs font-extrabold text-[#14241E]">運営スタッフ専用 入力モード</div>
+                <div class="text-xs text-[#5B6B62]">30,000点ちょうど＝浮き／同点ウマ均等分け／供託・反則対応</div>
+              </div>
+            </div>
+            <span class="text-xs font-extrabold px-2 py-1 rounded bg-[#2E7D5B] text-white shrink-0">認証済</span>
+          </div>
+
+          <!-- 対局日＆回戦数 -->
+          <div class="cafe-card p-3.5 space-y-2.5">
+            <div class="grid grid-cols-2 gap-2">
+              <div>
+                <label class="block text-xs font-bold text-[#5B6B62] mb-1"> 対局日</label>
+                <input type="date" id="game-date-input" class="cafe-input w-full px-2.5 py-1.5 text-xs font-extrabold">
+              </div>
+              <div>
+                <label class="block text-xs font-bold text-[#5B6B62] mb-1"> 回戦・卓メモ</label>
+                <input type="text" id="game-round-input" value="第1回戦" placeholder="例: 第1回戦 / A卓"
+                  class="cafe-input w-full px-2.5 py-1.5 text-xs font-extrabold">
+              </div>
+            </div>
+          </div>
+
+          <!-- 4人のスコア入力シート -->
+          <div class="cafe-card p-3.5 space-y-2.5">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-extrabold text-[#14241E]"> 4人の素点入力（30,000点持ち/返し）</span>
+              <button onclick="resetScoreInputs()"
+                class="text-xs font-bold text-[#5B6B62] underline">30,000点に戻す</button>
+            </div>
+
+            <div class="grid grid-cols-12 gap-1 text-xs font-bold text-[#5B6B62] px-1">
+              <div class="col-span-5">風 / プレイヤー</div>
+              <div class="col-span-3 text-right">素点</div>
+              <div class="col-span-2 text-center">反則</div>
+              <div class="col-span-2 text-right">公式pt</div>
+            </div>
+
+            <!-- 東・南・西・北の4行 -->
+            <div id="seat-inputs-container" class="space-y-2">
+              <!-- JSで初期生成 -->
+            </div>
+
+            <div class="text-xs text-[#5B6B62] px-1">
+              ※「反則」をタップすると<strong>チョンボ（トータルから▲20.0pt減算）</strong>を切り替えられます
+            </div>
+
+            <!-- 供託リーチ棒残り入力欄 -->
+            <div class="bg-[#F4EBD9] border border-[#C9B998] rounded-md p-2.5 flex items-center justify-between">
+              <div>
+                <div class="text-xs font-extrabold text-[#14241E]"> 供託リーチ棒残り（流局終了時）</div>
+                <div class="text-xs text-[#5B6B62]">1本＝1,000点（誰の得点にもならず卓外没収）</div>
+              </div>
+              <div class="flex items-center gap-1.5">
+                <button onclick="adjustKyotaku(-1000)"
+                  class="w-7 h-7 rounded bg-white border border-[#14241E] font-extrabold text-sm flex items-center justify-center">-</button>
+                <input type="number" id="kyotaku-score" step="1000" min="0" value="0" oninput="recalcOfficialPoints()"
+                  class="cafe-input w-20 px-2 py-1 text-xs font-extrabold text-right">
+                <button onclick="adjustKyotaku(1000)"
+                  class="w-7 h-7 rounded bg-white border border-[#14241E] font-extrabold text-sm flex items-center justify-center">+</button>
+              </div>
+            </div>
+
+            <!-- 浮き人数ステータス＆合計チェック -->
+            <div class="pt-1 flex flex-wrap items-center justify-between gap-1 text-xs px-1">
+              <div id="uma-status-badge" class="font-bold text-[#14241E] bg-[#F2C230] px-2.5 py-1 rounded-full">
+                 浮き人数・ウマ自動判定
+              </div>
+              <div id="score-sum-check" class="font-extrabold text-[#2E7D5B]">
+                計120,000点 OK!
+              </div>
+            </div>
+          </div>
+
+          <!-- 動画撮影卓オプション（1卓限定） -->
+          <div class="cafe-card-mint p-3.5 space-y-2">
+            <label class="flex items-center gap-2 cursor-pointer">
+              <input type="checkbox" id="has-video-check" class="w-4 h-4 accent-[#2E7D5B] rounded">
+              <span class="text-xs font-extrabold text-[#2B593F]"> 撮影卓（1番卓）の対局動画URLを紐付ける</span>
+            </label>
+            <input type="text" id="video-url-input" placeholder="YouTube限定公開URLなど（後から追加もOK）"
+              class="cafe-input w-full px-3 py-1.5 text-xs">
+          </div>
+
+          <!-- 対局登録ボタン -->
+          <button onclick="submitNewGame()" id="submit-game-btn"
+            class="cafe-btn-primary w-full py-3 rounded-md font-extrabold text-sm flex items-center justify-center gap-2">
+            <span> この対局結果を保存する！</span>
+          </button>
+          <div id="submit-toast"
+            class="hidden text-center text-xs font-extrabold text-[#2E7D5B] bg-[#EBFBEE] border border-[#B2F2BB] py-2.5 rounded-md">
+             対局結果を記録しました！ランキングと履歴に反映されました！
+          </div>
+
+          <!-- 新規プレイヤー登録カード -->
+          <div class="cafe-card p-3.5 space-y-2.5">
+            <div class="text-xs font-extrabold text-[#14241E] flex items-center gap-1">
+              新しい参加者を名簿に追加する
+            </div>
+            <div class="grid grid-cols-12 gap-1.5">
+              <div class="col-span-8">
+                <input type="text" id="new-player-name" placeholder="プレイヤー名"
+                  class="cafe-input w-full px-2.5 py-1.5 text-xs font-bold">
+              </div>
+              <input type="hidden" id="new-player-icon" value="">
+              <div class="col-span-4">
+                <select id="new-player-badge" class="cafe-input w-full px-1.5 py-1.5 text-xs font-bold">
+                  <option value="参加者">参加者</option>
+                  <option value="プロ連盟">プロ連盟</option>
+                  <option value="常連">常連</option>
+                  <option value="女性割">女性割</option>
+                  <option value="スタッフ">スタッフ</option>
+                </select>
+              </div>
+            </div>
+            <button onclick="registerNewPlayer()" class="cafe-btn-sub w-full py-2 rounded-md text-xs font-extrabold">
+              ＋ 名簿に追加する
+            </button>
+            <div id="player-add-toast" class="hidden text-center text-xs font-bold text-[#2E7D5B]">
+               プレイヤーを追加しました！
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+    <!-- フッター -->
+    <footer class="px-4 py-4 mt-6 bg-[#0F2E25] text-[#C9B998] text-[11px] font-bold flex items-center justify-between">
+      <span>麻雀かふぇ キャナリィ（一宮駅前）<br><span class="font-en tracking-[0.18em] text-[10px]">MONDAY NIGHT MAHJONG PRACTICE</span></span>
+      <button onclick="switchTab('input')" id="tab-btn-input" class="font-en text-[10px] tracking-[0.2em] text-[#C9B998]/70 underline underline-offset-2">
+        STAFF<span id="admin-tab-icon"></span>
+      </button>
+    </footer>
+  </div>
+
+  <script>
+    // =========================================================================
+    // 状態管理（Google Apps Script 環境とローカルお試し環境の両対応）
+    // =========================================================================
+    // =========================================================================
+    // データの保存先（Google Apps Script のウェブアプリURL）
+    // GitHub Pages など外部に置いたときは、このURLのGASにデータを読み書きしに行きます。
+    // GASの画面としてそのまま開いたときは google.script.run を直接使います。
+    // =========================================================================
+    const API_URL = 'https://script.google.com/macros/s/AKfycbzYFMbOc9pu4mFjUo_kDDtyviCuPnZ-kKRxsmTV4oVbCKQqXxtFQ7B6kSlLNLRsbtUt/exec';
+
+    (function installApiBridge() {
+      const servedByGas = (typeof google !== 'undefined' && google.script && google.script.run);
+      const isLocalFile = location.protocol === 'file:';
+      if (servedByGas || isLocalFile || !API_URL) return;
+      // google.script.run と同じ書き方（withSuccessHandler / withFailureHandler / 関数名(...)）で呼べる橋渡し
+      const makeRunner = (onOk, onNg) => new Proxy({}, {
+        get(_, name) {
+          if (name === 'withSuccessHandler') return fn => makeRunner(fn, onNg);
+          if (name === 'withFailureHandler') return fn => makeRunner(onOk, fn);
+          return (...args) => {
+            fetch(API_URL, { method: 'POST', body: JSON.stringify({ action: name, args }) })
+              .then(r => r.json())
+              .then(res => {
+                if (res && res.ok) { if (onOk) onOk(res.data); }
+                else if (onNg) onNg(new Error((res && res.error) || '通信エラー'));
+              })
+              .catch(err => { if (onNg) onNg(err); });
+          };
+        }
+      });
+      window.google = { script: { get run() { return makeRunner(null, null); } } };
+    })();
+
+    const isGasEnv = (typeof google !== 'undefined' && google.script && google.script.run);
+    let adminPasswordCache = ''; // 認証済みの運営パスワード（初期値: 138）
+    let currentSortMode = 'total'; // 'total' or 'avg'
+    let chomboCounts = [0, 0, 0, 0];
+    let showEmptyTablesFlag = false; // 一般閲覧時に空き卓もすべて表示するかどうか
+
+    function createDefaultLiveState() {
+      const tables = [];
+      for (let i = 1; i <= 7; i++) {
+        tables.push({
+          tableNo: i,
+          isCamera: i === 1,
+          active: i <= 2, // サンプルとして1番卓・2番卓を稼働中にしておく
+          roundLabel: i === 1 ? '第2回戦' : (i === 2 ? '第1回戦' : '第1回戦'),
+          startTime: i === 1 ? '19:10' : (i === 2 ? '19:25' : ''),
+          seats: i === 1 ? [
+            { wind: '東', name: 'みなみP', lastHan: false },
+            { wind: '南', name: 'たかはし', lastHan: false },
+            { wind: '西', name: 'ねこまる', lastHan: true },
+            { wind: '北', name: 'さとう', lastHan: false }
+          ] : (i === 2 ? [
+            { wind: '東', name: 'きむらP', lastHan: false },
+            { wind: '南', name: 'すずき', lastHan: true },
+            { wind: '西', name: 'やまもと', lastHan: false },
+            { wind: '北', name: 'いとう', lastHan: false }
+          ] : [
+            { wind: '東', name: '', lastHan: false },
+            { wind: '南', name: '', lastHan: false },
+            { wind: '西', name: '', lastHan: false },
+            { wind: '北', name: '', lastHan: false }
+          ])
+        });
+      }
+      return {
+        updatedAt: '19:30',
+        announcement: '18:00〜23:00 開催！現在2卓稼働中・飛び入り参加も大歓迎です',
+        waitingList: [
+          { name: 'わたなべ', note: '次卓待ち' },
+          { name: 'なかむら', note: '19:45頃〜' }
+        ],
+        tables: tables
+      };
+    }
+
+    // 初期データ（ローカルで開いたとき用のサンプルデータ）
+    let appData = {
+      players: [
+        { name: 'みなみP', icon: '', badge: 'プロ連盟' },
+        { name: 'たかはし', icon: '', badge: '常連' },
+        { name: 'ねこまる', icon: '', badge: '参加者' },
+        { name: 'さとう', icon: '', badge: '参加者' },
+        { name: 'きむらP', icon: '', badge: 'プロ連盟' },
+        { name: 'すずき', icon: '', badge: '参加者' },
+        { name: 'やまもと', icon: '', badge: '参加者' },
+        { name: 'いとう', icon: '', badge: '女性割' },
+        { name: 'わたなべ', icon: '', badge: '常連' },
+        { name: 'なかむら', icon: '', badge: '参加者' }
+      ],
+      liveState: createDefaultLiveState(),
+      gameLogs: [
+        {
+          id: 2,
+          dateIso: '2026-11-02',
+          dateLabel: '11/02 第2回戦',
+          umaLabel: '浮き2人 (+8/+4/-4/-8)・供託1,000点',
+          kyotaku: 1000,
+          hasVideo: true,
+          videoUrl: 'https://youtu.be/canary-practice-02',
+          results: [
+            { wind: '南', name: 'みなみP', score: 43200, chombo: 0, pt: 21.2, rank: 1 },
+            { wind: '東', name: 'たかはし', score: 33800, chombo: 0, pt: 7.8, rank: 2 },
+            { wind: '北', name: 'ねこまる', score: 24500, chombo: 0, pt: -9.5, rank: 3 },
+            { wind: '西', name: 'さとう', score: 17500, chombo: 0, pt: -20.5, rank: 4 }
+          ]
+        },
+        {
+          id: 1,
+          dateIso: '2026-11-02',
+          dateLabel: '11/02 第1回戦',
+          umaLabel: '浮き3人 (+4/+4/+4/-12)',
+          kyotaku: 0,
+          hasVideo: false,
+          videoUrl: '',
+          results: [
+            { wind: '西', name: 'たかはし', score: 36100, chombo: 0, pt: 10.1, rank: 1 },
+            { wind: '東', name: 'さとう', score: 33400, chombo: 0, pt: 7.4, rank: 2 },
+            { wind: '南', name: 'きむらP', score: 30000, chombo: 0, pt: 4.0, rank: 3 },
+            { wind: '北', name: 'すずき', score: 20500, chombo: 0, pt: -21.5, rank: 4 }
+          ]
+        }
+      ]
+    };
+
+    // 東・南・西・北の入力行を生成
+    function buildSeatInputsUI() {
+      const winds = [
+        { label: '東', bg: 'bg-[#FFE3E3]', text: 'text-[#B93A22]', defaultScore: 35200 },
+        { label: '南', bg: 'bg-[#E7F5FF]', text: 'text-[#1971C2]', defaultScore: 30000 },
+        { label: '西', bg: 'bg-[#F3F0FF]', text: 'text-[#6741D9]', defaultScore: 28500 },
+        { label: '北', bg: 'bg-[#EBFBEE]', text: 'text-[#2E7D5B]', defaultScore: 26300 }
+      ];
+      const container = document.getElementById('seat-inputs-container');
+      container.innerHTML = winds.map((w, idx) => `
+        <div class="grid grid-cols-12 gap-1.5 items-center bg-[#FBF6EA] p-2 rounded-md border border-[#D8CCB0]">
+          <div class="col-span-5 flex items-center gap-1">
+            <span class="inline-block px-1.5 py-1 rounded ${w.bg} ${w.text} font-extrabold text-xs shrink-0">${w.label}</span>
+            <select id="p${idx}-name" class="cafe-input w-full px-1.5 py-1.5 text-xs font-bold"></select>
+          </div>
+          <div class="col-span-3">
+            <input type="number" id="p${idx}-score" step="100" value="${w.defaultScore}" oninput="recalcOfficialPoints()" class="cafe-input w-full px-1.5 py-1.5 text-xs font-extrabold text-right">
+          </div>
+          <div class="col-span-2 text-center">
+            <button onclick="toggleChombo(${idx})" id="p${idx}-chombo-btn" class="px-1.5 py-1 rounded border border-[#C9B998] bg-white text-[#5B6B62] text-xs font-bold w-full">
+              なし
+            </button>
+          </div>
+          <div class="col-span-2 text-right">
+            <div id="p${idx}-pt" class="font-extrabold text-sm text-[#2E7D5B]">+0.0</div>
+            <div id="p${idx}-uma" class="text-xs text-[#5B6B62]">(ウマ0)</div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // プレイヤー選択肢の更新
+    function populatePlayerSelects() {
+      const names = appData.players.map(p => p.name);
+      [0, 1, 2, 3].forEach(idx => {
+        const sel = document.getElementById(`p${idx}-name`);
+        if (!sel) return;
+        const prev = sel.value || names[idx] || names[0] || '';
+        sel.innerHTML = names.map(n => `<option value="${n}" ${n === prev ? 'selected' : ''}>${n}</option>`).join('');
+      });
+
+      const waitSel = document.getElementById('waiting-select-player');
+      if (waitSel) {
+        waitSel.innerHTML = `<option value="">-- 名簿から選択 --</option>` +
+          names.map(n => `<option value="${n}">${n}</option>`).join('');
+      }
+    }
+
+    // 期間フィルターの選択肢更新
+    function populatePeriodFilter() {
+      const sel = document.getElementById('period-filter');
+      const current = sel.value || 'all';
+      const months = new Set();
+      appData.gameLogs.forEach(g => {
+        if (g.dateIso && g.dateIso.length >= 7) {
+          months.add(g.dateIso.slice(0, 7));
+        }
+      });
+      const sortedMonths = Array.from(months).sort().reverse();
+      sel.innerHTML = `<option value="all">全期間（通算）</option>` +
+        sortedMonths.map(m => {
+          const [y, mo] = m.split('-');
+          return `<option value="${m}" ${m === current ? 'selected' : ''}>${y}年${parseInt(mo, 10)}月</option>`;
+        }).join('');
+    }
+
+    // タブ切り替え
+    function switchTab(tabName) {
+      ['live', 'ranking', 'logs', 'profile', 'input'].forEach(t => {
+        const sec = document.getElementById('tab-' + t);
+        if (sec) sec.classList.toggle('hidden', t !== tabName);
+        const btn = document.getElementById('tab-btn-' + t);
+        if (btn && btn.classList.contains('nav-tab')) btn.classList.toggle('active', t === tabName);
+      });
+      window.scrollTo({ top: 0 });
+    }
+
+    // 運営ロック解除（初期パスワード: 138）
+    function unlockAdmin() {
+      const inputVal = document.getElementById('admin-pass-input').value.trim();
+      const errEl = document.getElementById('admin-login-err');
+      errEl.classList.add('hidden');
+
+      if (isGasEnv) {
+        setLoading(true);
+        google.script.run
+          .withSuccessHandler(res => {
+            setLoading(false);
+            if (res && res.ok) {
+              adminPasswordCache = inputVal;
+              showUnlockedAdminUI();
+            } else {
+              errEl.classList.remove('hidden');
+            }
+          })
+          .withFailureHandler(() => {
+            setLoading(false);
+            errEl.classList.remove('hidden');
+          })
+          .verifyAdminPassword(inputVal);
+      } else {
+        if (inputVal.length > 0) { // パソコンで直接開いたお試しモードのみ（本番はGAS側で照合）
+          adminPasswordCache = inputVal;
+          showUnlockedAdminUI();
+        } else {
+          errEl.classList.remove('hidden');
+        }
+      }
+    }
+
+    function showUnlockedAdminUI() {
+      document.getElementById('admin-login-card').classList.add('hidden');
+      document.getElementById('admin-Unlocked-area').classList.remove('hidden');
+      document.getElementById('admin-tab-icon').textContent = ' ON';
+      renderLiveStatus(); // 卓状況の運営編集UIを表示
+      renderLogs(); // 動画編集ボタンを表示するため再描画
+    }
+
+    // =========================================================================
+    // リアルタイム卓状況（最大7卓＋待機リスト＋ラス半管理）
+    // =========================================================================
+    function ensureLiveStateStructure() {
+      if (!appData.liveState || !Array.isArray(appData.liveState.tables)) {
+        appData.liveState = createDefaultLiveState();
+      }
+      // 7卓まで必ず揃える
+      for (let i = 1; i <= 7; i++) {
+        if (!appData.liveState.tables.find(t => t.tableNo === i)) {
+          appData.liveState.tables.push({
+            tableNo: i,
+            isCamera: i === 1,
+            active: false,
+            roundLabel: '第1回戦',
+            startTime: '',
+            seats: [
+              { wind: '東', name: '', lastHan: false },
+              { wind: '南', name: '', lastHan: false },
+              { wind: '西', name: '', lastHan: false },
+              { wind: '北', name: '', lastHan: false }
+            ]
+          });
+        }
+      }
+      appData.liveState.tables.sort((a, b) => a.tableNo - b.tableNo);
+      if (!Array.isArray(appData.liveState.waitingList)) {
+        appData.liveState.waitingList = [];
+      }
+    }
+
+    function renderLiveStatus() {
+      ensureLiveStateStructure();
+      const live = appData.liveState;
+      const isAdmin = Boolean(adminPasswordCache);
+
+      // 1. サマリー集計
+      const activeTables = live.tables.filter(t => t.active);
+      let playingCount = 0;
+      let lastHanCount = 0;
+      activeTables.forEach(t => {
+        t.seats.forEach(s => {
+          if (s.name && s.name.trim()) {
+            playingCount += 1;
+            if (s.lastHan) lastHanCount += 1;
+          }
+        });
+      });
+      const waitingCount = live.waitingList.length;
+
+      document.getElementById('live-stat-tables').textContent = activeTables.length;
+      document.getElementById('live-stat-playing').textContent = playingCount;
+      document.getElementById('live-stat-lasthan').textContent = lastHanCount;
+      document.getElementById('live-stat-waiting').textContent = waitingCount;
+      renderNextFree(live);
+      document.getElementById('live-updated-at').textContent = `更新: ${live.updatedAt || 'さっき'}`;
+      document.getElementById('live-announcement-text').textContent = ` ${live.announcement || '18:00〜23:00 開催！飛び入り参加も大歓迎です！'}`;
+
+      const editAnnBtn = document.getElementById('live-edit-announce-btn');
+      const waitAdminCtrl = document.getElementById('admin-waiting-controls');
+      const adminHint = document.getElementById('live-admin-hint');
+      if (isAdmin) {
+        editAnnBtn.classList.remove('hidden');
+        waitAdminCtrl.classList.remove('hidden');
+        adminHint.classList.add('hidden');
+      } else {
+        editAnnBtn.classList.add('hidden');
+        waitAdminCtrl.classList.add('hidden');
+        adminHint.classList.add('hidden');
+      }
+
+      // 2. 待機中メンバー描画
+      const readyBadge = document.getElementById('waiting-ready-badge');
+      if (waitingCount >= 4) readyBadge.classList.remove('hidden');
+      else readyBadge.classList.add('hidden');
+
+      const waitContainer = document.getElementById('live-waiting-list');
+      if (waitingCount === 0) {
+        waitContainer.innerHTML = `<div class="text-xs text-[#5B6B62] py-1">現在お待ちの方はいません（すぐご案内可能です）</div>`;
+      } else {
+        waitContainer.innerHTML = live.waitingList.map((w, idx) => {
+          const meta = getPlayerMeta(w.name);
+          const removeBtn = isAdmin
+            ? `<button onclick="removeWaitingPlayer(${idx})" class="ml-1 text-[#B93A22] font-extrabold hover:opacity-75" title="待機リストから削除">×</button>`
+            : '';
+          return `
+            <div class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-[#E7F5FF] border border-[#74C0FC] text-xs font-extrabold text-[#1971C2]">
+              <span>${idx + 1}. ${w.name}</span>
+              ${w.note ? `<span class="text-[10px] font-bold bg-white/80 px-1.5 py-0.2 rounded-full text-[#14241E]">${w.note}</span>` : ''}
+              ${removeBtn}
+            </div>
+          `;
+        }).join('');
+      }
+
+      // 3. 各卓カード描画（1〜7番卓）
+      const toggleBtn = document.getElementById('toggle-empty-tables-btn');
+      toggleBtn.textContent = (showEmptyTablesFlag || isAdmin)
+        ? '稼働中の卓のみ表示する'
+        : `空き卓もすべて表示する（残り${7 - activeTables.length}卓）`;
+
+      const tablesToShow = (showEmptyTablesFlag || isAdmin)
+        ? live.tables
+        : live.tables.filter(t => t.active);
+
+      const tablesContainer = document.getElementById('live-tables-container');
+      if (tablesToShow.length === 0) {
+        tablesContainer.innerHTML = `
+          <div class="cafe-card p-5 text-center space-y-2">
+            <div class="text-xs font-extrabold text-[#14241E]">現在稼働中の卓はありません</div>
+            <div class="text-xs text-[#5B6B62]">メンバーが集まり次第、対局スタートします！</div>
+          </div>
+        `;
+        return;
+      }
+
+      const windColors = {
+        '東': 'bg-[#FFE3E3] text-[#B93A22]',
+        '南': 'bg-[#E7F5FF] text-[#1971C2]',
+        '西': 'bg-[#F3F0FF] text-[#6741D9]',
+        '北': 'bg-[#EBFBEE] text-[#2E7D5B]'
+      };
+
+      const playerOptionsHtml = `<option value="">（空席）</option>` +
+        appData.players.map(p => `<option value="${p.name}">${p.name}</option>`).join('');
+
+      tablesContainer.innerHTML = tablesToShow.map(t => {
+        const tableLastHan = t.seats.filter(s => s.name && s.lastHan).length;
+        const camBadge = t.isCamera
+          ? `<span class="text-[10px] font-extrabold px-2 py-0.5 rounded-full bg-[#2E7D5B] text-white"> 撮影卓</span>`
+          : `<span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[#E9DFC8] text-[#4B5A52]">通常卓</span>`;
+
+        const statusBadge = t.active
+          ? `<span class="text-[11px] font-extrabold px-2 py-0.5 rounded-full bg-[#EBFBEE] text-[#2E7D5B] border border-[#B2F2BB]"> 対局中</span>`
+          : `<span class="text-[11px] font-bold px-2 py-0.5 rounded-full bg-gray-100 text-gray-500"> 空き卓</span>`;
+
+        const lastHanSummary = (t.active && tableLastHan > 0)
+          ? `<span class="text-[11px] font-extrabold px-2 py-0.5 rounded-full bg-[#FFE3E3] text-[#B93A22]">ラス半 ${tableLastHan}名</span>`
+          : '';
+
+        if (!isAdmin) {
+          // 一般参加者向けビュー
+          const seatsHtml = t.active ? `
+            <div class="grid grid-cols-2 gap-1.5 pt-1">
+              ${t.seats.map(s => {
+            const wStyle = windColors[s.wind] || 'bg-gray-100 text-gray-700';
+            const pName = s.name || '（空席）';
+            const meta = s.name ? getPlayerMeta(s.name) : { icon: '' };
+            const lhBadge = s.lastHan
+              ? `<span class="ml-auto text-[10px] font-extrabold px-1.5 py-0.5 rounded bg-[#FFE3E3] text-[#B93A22] border border-[#FFA8A8] shrink-0">ラス半</span>`
+              : '';
+            return `
+                  <div onclick="${s.name ? `openPlayerProfile('${s.name}')` : ''}" class="flex items-center gap-1.5 p-2 rounded-md bg-[#FBF6EA] border border-[#D8CCB0] ${s.name ? 'cursor-pointer hover:bg-[#F4EBD9]/50' : 'opacity-60'}">
+                    <span class="w-5 h-5 rounded-md ${wStyle} font-extrabold text-[11px] inline-flex items-center justify-center shrink-0">${s.wind}</span>
+                    <span class="text-xs font-extrabold text-[#14241E] truncate">${pName}</span>
+                    ${lhBadge}
+                  </div>
+                `;
+          }).join('')}
+            </div>
+          ` : `<div class="text-xs text-[#5B6B62] py-1">現在空いています（4名揃い次第スタート可能）</div>`;
+
+          return `
+            <div class="${t.isCamera && t.active ? 'cafe-card-mint' : 'cafe-card'} p-3.5 space-y-2 ${!t.active ? 'opacity-75' : ''}">
+              <div class="flex items-center justify-between flex-wrap gap-1">
+                <div class="flex items-center gap-1.5">
+                  <span class="text-sm font-extrabold text-[#14241E]">第${t.tableNo}卓</span>
+                  ${camBadge}
+                  ${statusBadge}
+                </div>
+                <div class="flex items-center gap-1.5">
+                  ${lastHanSummary}
+                  ${t.active ? `<span class="text-[11px] font-bold text-[#5B6B62]">${t.roundLabel || ''} ${t.startTime ? `(${t.startTime}〜)` : ''}</span>` : ''}
+                </div>
+              </div>
+              ${t.active ? `<div data-timer-table="${t.tableNo}">${buildTimerHtml(t)}</div>` : ''}
+              ${seatsHtml}
+            </div>
+          `;
+        } else {
+          // 運営スタッフ向け編集ビュー
+          const seatsAdminHtml = `
+            <div class="grid grid-cols-1 gap-1.5 pt-1">
+              ${t.seats.map((s, sIdx) => {
+            const wStyle = windColors[s.wind] || 'bg-gray-100 text-gray-700';
+            const lhBtnClass = s.lastHan
+              ? 'bg-[#FFE3E3] text-[#B93A22] border-[#B93A22] font-extrabold'
+              : 'bg-white text-[#5B6B62] border-[#C9B998] font-bold';
+            return `
+                  <div class="flex items-center gap-1.5 bg-[#FBF6EA] p-1.5 rounded-md border border-[#D8CCB0]">
+                    <span class="w-6 h-6 rounded ${wStyle} font-extrabold text-xs inline-flex items-center justify-center shrink-0">${s.wind}</span>
+                    <select onchange="onAdminChangeSeatPlayer(${t.tableNo}, ${sIdx}, this.value)" class="cafe-input px-2 py-1 text-xs font-extrabold flex-1">
+                      <option value="">（空席）</option>
+                      ${appData.players.map(p => `<option value="${p.name}" ${p.name === s.name ? 'selected' : ''}>${p.name}</option>`).join('')}
+                    </select>
+                    <button onclick="onAdminToggleLastHan(${t.tableNo}, ${sIdx})" class="px-2.5 py-1 rounded border text-xs ${lhBtnClass} shrink-0">
+                      ${s.lastHan ? 'ラス半中' : 'ラス半'}
+                    </button>
+                  </div>
+                `;
+          }).join('')}
+            </div>
+          `;
+
+          return `
+            <div class="${t.isCamera && t.active ? 'cafe-card-mint' : 'cafe-card'} p-3.5 space-y-2.5">
+              <div class="flex items-center justify-between flex-wrap gap-1">
+                <div class="flex items-center gap-1.5">
+                  <span class="text-sm font-extrabold text-[#14241E]">第${t.tableNo}卓</span>
+                  ${camBadge}
+                  <button onclick="onAdminToggleTableActive(${t.tableNo})" class="px-2.5 py-0.5 rounded-full text-xs font-extrabold border ${t.active ? 'bg-[#2E7D5B] text-white border-[#2E7D5B]' : 'bg-white text-[#5B6B62] border-[#C9B998]'}">
+                    ${t.active ? ' 稼働中（タップで空卓へ）' : ' 空き卓（タップで立卓）'}
+                  </button>
+                </div>
+                ${lastHanSummary}
+              </div>
+
+              <div class="grid grid-cols-2 gap-1.5">
+                <div class="flex items-center gap-1">
+                  <span class="text-[11px] font-bold text-[#5B6B62] shrink-0">回戦:</span>
+                  <input type="text" value="${t.roundLabel || '第1回戦'}" onchange="onAdminChangeTableMeta(${t.tableNo}, 'roundLabel', this.value)" class="cafe-input w-full px-2 py-1 text-xs font-bold">
+                </div>
+                <div class="flex items-center gap-1">
+                  <span class="text-[11px] font-bold text-[#5B6B62] shrink-0">開始:</span>
+                  <input type="text" value="${t.startTime || ''}" placeholder="例: 19:30" onchange="onAdminChangeTableMeta(${t.tableNo}, 'startTime', this.value)" class="cafe-input w-full px-2 py-1 text-xs font-bold">
+                </div>
+              </div>
+
+              ${t.active ? `
+              <div class="flex items-center gap-2">
+                <div class="flex-1" data-timer-table="${t.tableNo}">${buildTimerHtml(t)}</div>
+                <button onclick="startNextHanchan(${t.tableNo})" class="cafe-btn-sub px-2.5 py-1 rounded text-[11px] font-extrabold shrink-0">
+                   次の半荘スタート
+                </button>
+              </div>` : ''}
+
+              ${seatsAdminHtml}
+
+              <div class="flex flex-wrap items-center justify-between gap-1.5 pt-1 border-t border-dashed border-[#D8CCB0]">
+                <div class="flex items-center gap-1">
+                  <button onclick="fillTableFromWaiting(${t.tableNo})" class="cafe-btn-sub px-2.5 py-1 rounded text-[11px] font-extrabold">
+                     待機先頭から補充
+                  </button>
+                  <button onclick="clearTableSeats(${t.tableNo})" class="cafe-btn-sub px-2 py-1 rounded text-[11px] font-bold text-[#5B6B62]">
+                    クリア
+                  </button>
+                </div>
+                <button onclick="transferTableToScoreInput(${t.tableNo})" class="cafe-btn-primary px-3 py-1 rounded text-[11px] font-extrabold">
+                   終局→点数入力へ送る
+                </button>
+              </div>
+            </div>
+          `;
+        }
+      }).join('');
+    }
+
+    // =========================================================================
+    // 残り時間（50分打ち切り＋1局）
+    // =========================================================================
+    const HANCHAN_LIMIT_MIN = 50;
+
+    function nowHHMM() {
+      const now = new Date();
+      return `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`;
+    }
+
+    // 卓の開始時刻（"19:05"）から経過・残り時間を計算する
+    function getTableTimer(t) {
+      if (!t || !t.active || !/^\d{1,2}:\d{2}$/.test(String(t.startTime || '').trim())) return null;
+      const [h, m] = String(t.startTime).trim().split(':').map(Number);
+      const start = new Date();
+      start.setHours(h, m, 0, 0);
+      const elapsedMin = Math.max(0, (Date.now() - start.getTime()) / 60000);
+      const remain = Math.ceil(HANCHAN_LIMIT_MIN - elapsedMin);
+      const pct = Math.min(100, (elapsedMin / HANCHAN_LIMIT_MIN) * 100);
+      const end = new Date(start.getTime() + HANCHAN_LIMIT_MIN * 60000);
+      const endTime = `${String(end.getHours()).padStart(2, '0')}:${String(end.getMinutes()).padStart(2, '0')}`;
+      return { elapsedMin, remain, pct, endTime };
+    }
+
+    function buildTimerHtml(t) {
+      const tm = getTableTimer(t);
+      if (!tm) {
+        return `<div class="text-[11px] font-bold text-[#5B6B62]"> 開始時刻が未入力です</div>`;
+      }
+      let label, color, bar;
+      if (tm.remain <= 0) {
+        label = ' 50分経過・打ち切り（あと1局）';
+        color = 'text-[#B93A22]';
+        bar = 'bg-[#D9472B]';
+      } else if (tm.remain <= 10) {
+        label = ` 残り ${tm.remain}分・まもなく終局`;
+        color = 'text-[#D9480F]';
+        bar = 'bg-[#FD7E14]';
+      } else {
+        label = ` 残り ${tm.remain}分`;
+        color = 'text-[#2E7D5B]';
+        bar = 'bg-[#40C057]';
+      }
+      return `
+        <div class="space-y-1">
+          <div class="flex items-center justify-between text-[11px] font-extrabold ${color}">
+            <span>${label}</span>
+            <span class="text-[#5B6B62] font-bold">${t.startTime}開始 → 打ち切り ${tm.endTime}</span>
+          </div>
+          <div class="w-full h-1.5 rounded-full bg-[#D8CCB0] overflow-hidden">
+            <div class="${bar} h-full" style="width:${tm.pct}%"></div>
+          </div>
+        </div>
+      `;
+    }
+
+    // 「次に空きそうな卓」を表示（待っている人向け）
+    function renderNextFree(live) {
+      const box = document.getElementById('live-next-free');
+      if (!box) return;
+      const candidates = live.tables
+        .filter(t => t.active)
+        .map(t => ({ t, tm: getTableTimer(t), lastHan: t.seats.filter(s => s.name && s.lastHan).length }))
+        .filter(x => x.tm)
+        .sort((a, b) => a.tm.remain - b.tm.remain);
+      if (candidates.length === 0) {
+        box.classList.add('hidden');
+        return;
+      }
+      const c = candidates[0];
+      const when = c.tm.remain <= 0 ? '最終局' : `残り${c.tm.remain}分`;
+      const seatInfo = c.lastHan > 0 ? `・ラス半${c.lastHan}名 → ${c.lastHan}席空く予定` : '';
+      box.innerHTML = ` 次に終わりそうな卓：<span class="text-[#B93A22] font-extrabold">第${c.t.tableNo}卓（${when}）</span>${seatInfo}`;
+      box.classList.remove('hidden');
+    }
+
+    // 残り時間の表示だけを更新（入力中の画面を崩さないよう、卓カード全体は描き直さない）
+    function updateTimersOnly() {
+      if (!appData.liveState || !Array.isArray(appData.liveState.tables)) return;
+      document.querySelectorAll('[data-timer-table]').forEach(el => {
+        const no = Number(el.getAttribute('data-timer-table'));
+        const t = appData.liveState.tables.find(x => x.tableNo === no);
+        if (t) el.innerHTML = buildTimerHtml(t);
+      });
+      renderNextFree(appData.liveState);
+    }
+
+    // 同じ卓で次の半荘を始める：開始時刻を今にリセットし、回戦数を+1
+    function startNextHanchan(tableNo) {
+      const t = appData.liveState.tables.find(x => x.tableNo === tableNo);
+      if (!t) return;
+      if (!confirm(`第${tableNo}卓の次の半荘をスタートし、タイマーを0分に戻しますか？\n（点数の入力がまだなら、先に「終局→点数入力へ送る」で保存してください）`)) return;
+      const m = String(t.roundLabel || '').match(/第(\d+)回戦/);
+      t.roundLabel = m ? `第${parseInt(m[1], 10) + 1}回戦` : '第1回戦';
+      t.startTime = nowHHMM();
+      persistLiveState();
+    }
+
+    // 閲覧者の画面は60秒ごとに最新の卓状況を取り込む（運営スタッフが入力中のときは除く）
+    function autoRefreshTick() {
+      if (document.hidden) return;
+      const liveTab = document.getElementById('tab-live');
+      if (!liveTab || liveTab.classList.contains('hidden')) return;
+      if (adminPasswordCache) return;
+      if (isGasEnv) {
+        google.script.run
+          .withSuccessHandler(data => {
+            if (data) {
+              appData = data;
+              renderLiveStatus();
+            }
+          })
+          .getAppData();
+      }
+    }
+
+    function toggleEmptyTables() {
+      showEmptyTablesFlag = !showEmptyTablesFlag;
+      renderLiveStatus();
+    }
+
+    function refreshLiveFromServer() {
+      if (isGasEnv) {
+        setLoading(true);
+        google.script.run
+          .withSuccessHandler(data => {
+            setLoading(false);
+            if (data) {
+              appData = data;
+              renderLiveStatus();
+              renderRanking();
+              renderLogs();
+            }
+          })
+          .withFailureHandler(() => setLoading(false))
+          .getAppData();
+      } else {
+        loadLocalFallback();
+        renderLiveStatus();
+      }
+    }
+
+    function persistLiveState() {
+      const now = new Date();
+      const hh = String(now.getHours()).padStart(2, '0');
+      const mm = String(now.getMinutes()).padStart(2, '0');
+      appData.liveState.updatedAt = `${hh}:${mm}`;
+      renderLiveStatus();
+
+      if (isGasEnv) {
+        setLoading(true);
+        google.script.run
+          .withSuccessHandler(data => {
+            setLoading(false);
+            if (data && data.liveState) {
+              appData = data;
+              renderLiveStatus();
+            }
+          })
+          .withFailureHandler(err => {
+            setLoading(false);
+            alert('卓状況の保存エラー: ' + (err.message || err));
+          })
+          .saveLiveState({
+            password: adminPasswordCache,
+            liveState: appData.liveState
+          });
+      } else {
+        saveLocalFallback();
+      }
+    }
+
+    function editLiveAnnouncement() {
+      const cur = appData.liveState.announcement || '';
+      const next = prompt('リアルタイム画面の上部に表示する一言お知らせを入力してください：', cur);
+      if (next === null) return;
+      appData.liveState.announcement = next.trim();
+      persistLiveState();
+    }
+
+    function addWaitingPlayer() {
+      const selEl = document.getElementById('waiting-select-player');
+      const customEl = document.getElementById('waiting-custom-name');
+      const name = (customEl.value.trim() || selEl.value.trim());
+      if (!name) {
+        alert('待機リストに追加するプレイヤーを選択または入力してください');
+        return;
+      }
+      appData.liveState.waitingList.push({ name: name, note: '次卓待ち' });
+      customEl.value = '';
+      selEl.value = '';
+      persistLiveState();
+    }
+
+    function removeWaitingPlayer(idx) {
+      appData.liveState.waitingList.splice(idx, 1);
+      persistLiveState();
+    }
+
+    function onAdminToggleTableActive(tableNo) {
+      const t = appData.liveState.tables.find(x => x.tableNo === tableNo);
+      if (!t) return;
+      t.active = !t.active;
+      if (t.active && !t.startTime) {
+        const now = new Date();
+        t.startTime = `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`;
+      }
+      persistLiveState();
+    }
+
+    function onAdminChangeTableMeta(tableNo, field, value) {
+      const t = appData.liveState.tables.find(x => x.tableNo === tableNo);
+      if (!t) return;
+      t[field] = value.trim();
+      persistLiveState();
+    }
+
+    function onAdminChangeSeatPlayer(tableNo, seatIdx, playerName) {
+      const t = appData.liveState.tables.find(x => x.tableNo === tableNo);
+      if (!t || !t.seats[seatIdx]) return;
+      t.seats[seatIdx].name = playerName;
+      if (!playerName) t.seats[seatIdx].lastHan = false;
+      // 1人でも座ったら自動的に卓を稼働中にする
+      const anySeated = t.seats.some(s => s.name && s.name.trim());
+      if (anySeated && !t.active) {
+        t.active = true;
+        if (!t.startTime) {
+          const now = new Date();
+          t.startTime = `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`;
+        }
+      }
+      persistLiveState();
+    }
+
+    function onAdminToggleLastHan(tableNo, seatIdx) {
+      const t = appData.liveState.tables.find(x => x.tableNo === tableNo);
+      if (!t || !t.seats[seatIdx]) return;
+      t.seats[seatIdx].lastHan = !t.seats[seatIdx].lastHan;
+      persistLiveState();
+    }
+
+    function fillTableFromWaiting(tableNo) {
+      const t = appData.liveState.tables.find(x => x.tableNo === tableNo);
+      if (!t) return;
+      let filled = 0;
+      t.seats.forEach(s => {
+        if (!s.name && appData.liveState.waitingList.length > 0) {
+          const nextWait = appData.liveState.waitingList.shift();
+          s.name = nextWait.name;
+          s.lastHan = false;
+          filled++;
+        }
+      });
+      if (filled === 0) {
+        alert('空席がないか、待機リストにメンバーがいません');
+        return;
+      }
+      t.active = true;
+      const now = new Date();
+      t.startTime = `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`;
+      persistLiveState();
+    }
+
+    function clearTableSeats(tableNo) {
+      const t = appData.liveState.tables.find(x => x.tableNo === tableNo);
+      if (!t) return;
+      if (!confirm(`第${tableNo}卓のメンバーとラス半フラグをクリアして空き卓にしますか？`)) return;
+      t.active = false;
+      t.startTime = '';
+      t.seats.forEach(s => {
+        s.name = '';
+        s.lastHan = false;
+      });
+      persistLiveState();
+    }
+
+    // 卓の4人をそのまま「運営入力」タブの東・南・西・北へ転送する連携機能
+    function transferTableToScoreInput(tableNo) {
+      const t = appData.liveState.tables.find(x => x.tableNo === tableNo);
+      if (!t) return;
+      const seatedNames = t.seats.map(s => s.name).filter(Boolean);
+      if (seatedNames.length < 4) {
+        if (!confirm(`第${tableNo}卓には現在${seatedNames.length}名しか設定されていませんが、点数入力画面へ転送しますか？`)) {
+          return;
+        }
+      }
+
+      [0, 1, 2, 3].forEach(idx => {
+        const sel = document.getElementById(`p${idx}-name`);
+        const targetName = t.seats[idx].name;
+        if (sel && targetName) {
+          sel.value = targetName;
+        }
+      });
+
+      const roundInput = document.getElementById('game-round-input');
+      if (roundInput) {
+        roundInput.value = `第${tableNo}卓 ${t.roundLabel || '第1回戦'}`.trim();
+      }
+
+      // 1番卓（撮影卓）なら動画チェックも自動でONにする
+      const videoCheck = document.getElementById('has-video-check');
+      if (videoCheck) {
+        videoCheck.checked = Boolean(t.isCamera);
+      }
+
+      resetScoreInputs();
+      switchTab('input');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // =========================================================================
+    // 連盟公式ルール 自動計算ロジック
+    // ・30,000点ちょうど（score >= 30000）は「浮き」扱い
+    // ・同点者がいる場合は該当順位の順位点（ウマ）を全員で均等割り
+    // ・チョンボは1回につきトータルから▲20.0pt減算
+    // =========================================================================
+    function calculateOfficialRule(entries) {
+      const floatCount = entries.filter(e => e.score >= 30000).length;
+      let baseUma = [0, 0, 0, 0];
+      let umaDesc = '全員沈み（ウマ0）';
+
+      if (floatCount === 1) {
+        baseUma = [12, -4, -4, -4];
+        umaDesc = ' 浮き1人 (+12/-4/-4/-4)';
+      } else if (floatCount === 2) {
+        baseUma = [8, 4, -4, -8];
+        umaDesc = ' 浮き2人 (+8/+4/-4/-8)';
+      } else if (floatCount === 3) {
+        baseUma = [4, 4, 4, -12];
+        umaDesc = ' 浮き3人 (+4/+4/+4/-12)';
+      } else if (floatCount === 4) {
+        baseUma = [0, 0, 0, 0];
+        umaDesc = ' 4人全員浮き (ウマ0)';
+      }
+
+      const sorted = [...entries].sort((a, b) => b.score - a.score || a.windIdx - b.windIdx);
+
+      let hasTie = false;
+      let i = 0;
+      while (i < 4) {
+        let j = i;
+        while (j + 1 < 4 && sorted[j + 1].score === sorted[i].score) {
+          j++;
+        }
+        if (j > i) hasTie = true;
+        let sumUma = 0;
+        for (let k = i; k <= j; k++) sumUma += baseUma[k];
+        const avgUma = sumUma / (j - i + 1);
+        for (let k = i; k <= j; k++) {
+          sorted[k].uma = Math.round(avgUma * 10) / 10;
+          sorted[k].rank = i + 1;
+          const chomboPenalty = (sorted[k].chombo || 0) * 20;
+          const rawPt = (sorted[k].score - 30000) / 1000 + avgUma - chomboPenalty;
+          sorted[k].pt = Math.round(rawPt * 10) / 10;
+        }
+        i = j + 1;
+      }
+
+      if (hasTie) {
+        umaDesc += '・同点分け';
+      }
+
+      return { sorted, umaDesc };
+    }
+
+    function recalcOfficialPoints() {
+      const winds = ['東', '南', '西', '北'];
+      const entries = [0, 1, 2, 3].map(idx => {
+        const nameEl = document.getElementById(`p${idx}-name`);
+        const scoreEl = document.getElementById(`p${idx}-score`);
+        return {
+          windIdx: idx,
+          wind: winds[idx],
+          name: nameEl ? nameEl.value : '',
+          score: parseInt(scoreEl ? scoreEl.value : '0', 10) || 0,
+          chombo: chomboCounts[idx] || 0
+        };
+      });
+
+      const kyotaku = parseInt(document.getElementById('kyotaku-score').value || '0', 10);
+      const sumScore = entries.reduce((acc, e) => acc + e.score, 0);
+      const totalWithKyotaku = sumScore + kyotaku;
+
+      const sumCheckEl = document.getElementById('score-sum-check');
+      if (totalWithKyotaku === 120000) {
+        sumCheckEl.textContent = kyotaku > 0
+          ? `素点${sumScore.toLocaleString()} + 供託${kyotaku.toLocaleString()} = 120,000点 OK!`
+          : '合計: 120,000点 OK!';
+        sumCheckEl.className = 'font-extrabold text-[#2E7D5B]';
+      } else {
+        const diff = totalWithKyotaku - 120000;
+        const sign = diff > 0 ? '+' : '';
+        sumCheckEl.textContent = `計${totalWithKyotaku.toLocaleString()}点 (${sign}${diff.toLocaleString()}点ズレ)`;
+        sumCheckEl.className = 'font-extrabold text-[#D9472B]';
+      }
+
+      const { sorted, umaDesc } = calculateOfficialRule(entries);
+      document.getElementById('uma-status-badge').textContent = umaDesc;
+
+      sorted.forEach(item => {
+        const ptEl = document.getElementById(`p${item.windIdx}-pt`);
+        const umaEl = document.getElementById(`p${item.windIdx}-uma`);
+        if (!ptEl || !umaEl) return;
+        const sign = item.pt > 0 ? '+' : '';
+        const umaSign = item.uma > 0 ? '+' : '';
+        ptEl.textContent = `${sign}${item.pt.toFixed(1)}`;
+        ptEl.className = 'font-extrabold text-sm ' + (item.pt >= 0 ? 'text-[#2E7D5B]' : 'text-[#D9472B]');
+        umaEl.textContent = item.chombo > 0
+          ? `(ウマ${umaSign}${item.uma}/反-${item.chombo * 20})`
+          : `(ウマ${umaSign}${item.uma})`;
+      });
+    }
+
+    function toggleChombo(idx) {
+      chomboCounts[idx] = (chomboCounts[idx] + 1) % 3;
+      chomboCounts.forEach((cnt, i) => {
+        const btn = document.getElementById(`p${i}-chombo-btn`);
+        if (!btn) return;
+        if (cnt === 0) {
+          btn.textContent = 'なし';
+          btn.className = 'px-1.5 py-1 rounded border border-[#C9B998] bg-white text-[#5B6B62] text-xs font-bold w-full';
+        } else {
+          btn.textContent = `▲${cnt * 20}pt`;
+          btn.className = 'px-1.5 py-1 rounded border-2 border-[#B93A22] bg-[#FFE3E3] text-[#B93A22] text-xs font-extrabold w-full';
+        }
+      });
+      recalcOfficialPoints();
+    }
+
+    function adjustKyotaku(delta) {
+      const el = document.getElementById('kyotaku-score');
+      const cur = parseInt(el.value || '0', 10);
+      el.value = Math.max(0, cur + delta);
+      recalcOfficialPoints();
+    }
+
+    function resetScoreInputs() {
+      [0, 1, 2, 3].forEach(idx => {
+        document.getElementById(`p${idx}-score`).value = 30000;
+      });
+      document.getElementById('kyotaku-score').value = 0;
+      chomboCounts = [0, 0, 0, 0];
+      [0, 1, 2, 3].forEach(idx => {
+        const btn = document.getElementById(`p${idx}-chombo-btn`);
+        if (btn) {
+          btn.textContent = 'なし';
+          btn.className = 'px-1.5 py-1 rounded border border-[#C9B998] bg-white text-[#5B6B62] text-xs font-bold w-full';
+        }
+      });
+      recalcOfficialPoints();
+    }
+
+    // 対局結果の保存
+    function submitNewGame() {
+      const winds = ['東', '南', '西', '北'];
+      const entries = [0, 1, 2, 3].map(idx => ({
+        windIdx: idx,
+        wind: winds[idx],
+        name: document.getElementById(`p${idx}-name`).value,
+        score: parseInt(document.getElementById(`p${idx}-score`).value || '0', 10),
+        chombo: chomboCounts[idx] || 0
+      }));
+
+      // 同名プレイヤー重複チェック
+      const uniqueNames = new Set(entries.map(e => e.name));
+      if (uniqueNames.size < 4) {
+        if (!confirm('同じプレイヤーが複数の席で選択されています。このまま登録しますか？')) {
+          return;
+        }
+      }
+
+      const kyotaku = parseInt(document.getElementById('kyotaku-score').value || '0', 10);
+      const sumScore = entries.reduce((a, b) => a + b.score, 0) + kyotaku;
+      if (sumScore !== 120000) {
+        if (!confirm(`素点と供託の合計が ${sumScore.toLocaleString()}点（120,000点と一致しません）ですが、このまま登録しますか？`)) {
+          return;
+        }
+      }
+
+      const { sorted, umaDesc } = calculateOfficialRule(entries);
+      // 席順（東・南・西・北）に戻した配列を作る
+      const seatEntries = [0, 1, 2, 3].map(wIdx => sorted.find(s => s.windIdx === wIdx));
+
+      const dateIso = document.getElementById('game-date-input').value;
+      const roundStr = document.getElementById('game-round-input').value.trim() || '対局';
+      const shortDate = dateIso ? dateIso.slice(5).replace('-', '/') : '';
+      const dateLabel = `${shortDate} ${roundStr}`.trim();
+
+      const hasVideo = document.getElementById('has-video-check').checked;
+      const videoUrl = hasVideo ? document.getElementById('video-url-input').value.trim() : '';
+
+      let label = umaDesc.replace(' ', '');
+      if (kyotaku > 0) label += `・供託${kyotaku.toLocaleString()}点`;
+
+      const payload = {
+        password: adminPasswordCache,
+        dateIso: dateIso,
+        dateLabel: dateLabel,
+        umaLabel: label,
+        kyotaku: kyotaku,
+        videoUrl: videoUrl,
+        seatEntries: seatEntries
+      };
+
+      if (isGasEnv) {
+        setLoading(true);
+        google.script.run
+          .withSuccessHandler(data => {
+            setLoading(false);
+            appData = data;
+            onAfterGameSaved();
+          })
+          .withFailureHandler(err => {
+            setLoading(false);
+            alert('保存エラー: ' + (err.message || err));
+          })
+          .saveGameResult(payload);
+      } else {
+        const newLog = {
+          id: appData.gameLogs.length + 1,
+          dateIso: dateIso,
+          dateLabel: dateLabel,
+          umaLabel: label,
+          kyotaku: kyotaku,
+          hasVideo: Boolean(videoUrl),
+          videoUrl: videoUrl,
+          results: sorted.map(s => ({
+            wind: s.wind,
+            name: s.name,
+            score: s.score,
+            chombo: s.chombo,
+            pt: s.pt,
+            rank: s.rank
+          }))
+        };
+        appData.gameLogs.unshift(newLog);
+        saveLocalFallback();
+        onAfterGameSaved();
+      }
+    }
+
+    function onAfterGameSaved() {
+      populatePeriodFilter();
+      renderRanking();
+      renderLogs();
+      renderProfile();
+
+      // 回戦数を自動的に+1進める
+      const roundInput = document.getElementById('game-round-input');
+      const m = roundInput.value.match(/第(\d+)回戦/);
+      if (m) {
+        roundInput.value = `第${parseInt(m[1], 10) + 1}回戦`;
+      }
+
+      const toast = document.getElementById('submit-toast');
+      toast.classList.remove('hidden');
+      setTimeout(() => toast.classList.add('hidden'), 3500);
+    }
+
+    // 新規プレイヤー追加
+    function registerNewPlayer() {
+      const nameEl = document.getElementById('new-player-name');
+      const name = nameEl.value.trim();
+      const icon = document.getElementById('new-player-icon').value;
+      const badge = document.getElementById('new-player-badge').value;
+
+      if (!name) {
+        alert('プレイヤー名を入力してください');
+        return;
+      }
+
+      if (isGasEnv) {
+        setLoading(true);
+        google.script.run
+          .withSuccessHandler(data => {
+            setLoading(false);
+            appData = data;
+            nameEl.value = '';
+            populatePlayerSelects();
+            renderLiveStatus();
+            renderRanking();
+            renderProfile();
+            showPlayerAddToast();
+          })
+          .withFailureHandler(err => {
+            setLoading(false);
+            alert(err.message || err);
+          })
+          .addPlayer({ password: adminPasswordCache, name, icon, badge });
+      } else {
+        if (appData.players.some(p => p.name === name)) {
+          alert('同じ名前のプレイヤーが既に登録されています');
+          return;
+        }
+        appData.players.push({ name, icon, badge });
+        saveLocalFallback();
+        nameEl.value = '';
+        populatePlayerSelects();
+        renderLiveStatus();
+        renderRanking();
+        renderProfile();
+        showPlayerAddToast();
+      }
+    }
+
+    function showPlayerAddToast() {
+      const t = document.getElementById('player-add-toast');
+      t.classList.remove('hidden');
+      setTimeout(() => t.classList.add('hidden'), 3000);
+    }
+
+    // =========================================================================
+    // 集計＆描画
+    // =========================================================================
+    function getPlayerMeta(name) {
+      const p = appData.players.find(x => x.name === name) || { name, badge: '\u53C2\u52A0\u8005' };
+      return { ...p, icon: String(name || '').trim().charAt(0) || '-' };
+    }
+
+    function computePlayerStats(periodValue = 'all') {
+      const map = {};
+      appData.players.forEach(p => {
+        map[p.name] = {
+          name: p.name,
+          games: 0,
+          totalPt: 0,
+          totalScore: 0,
+          maxScore: -999999,
+          ranks: [0, 0, 0, 0]
+        };
+      });
+
+      const filteredLogs = periodValue === 'all'
+        ? appData.gameLogs
+        : appData.gameLogs.filter(g => (g.dateIso || '').startsWith(periodValue));
+
+      filteredLogs.forEach(log => {
+        log.results.forEach(r => {
+          if (!map[r.name]) {
+            map[r.name] = { name: r.name, games: 0, totalPt: 0, totalScore: 0, maxScore: -999999, ranks: [0, 0, 0, 0] };
+          }
+          const st = map[r.name];
+          st.games += 1;
+          st.totalPt = Math.round((st.totalPt + r.pt) * 10) / 10;
+          st.totalScore += r.score;
+          if (r.score > st.maxScore) st.maxScore = r.score;
+          const rIdx = Math.min(3, Math.max(0, (r.rank || 1) - 1));
+          st.ranks[rIdx] += 1;
+        });
+      });
+
+      return Object.values(map).filter(p => p.games > 0).map(p => {
+        const avgPt = Math.round((p.totalPt / p.games) * 10) / 10;
+        const avgRank = ((p.ranks[0] * 1 + p.ranks[1] * 2 + p.ranks[2] * 3 + p.ranks[3] * 4) / p.games).toFixed(2);
+        const avgScore = Math.round(p.totalScore / p.games);
+        const rentai = (((p.ranks[0] + p.ranks[1]) / p.games) * 100).toFixed(1);
+        return { ...p, avgPt, avgRank, avgScore, rentai };
+      });
+    }
+
+    function setSortMode(mode) {
+      currentSortMode = mode;
+      const totalBtn = document.getElementById('sort-total-btn');
+      const avgBtn = document.getElementById('sort-avg-btn');
+      if (mode === 'total') {
+        totalBtn.className = 'py-1.5 rounded text-xs font-extrabold bg-white text-[#14241E] shadow-sm transition-all';
+        avgBtn.className = 'py-1.5 rounded text-xs font-bold text-[#5B6B62] transition-all';
+      } else {
+        avgBtn.className = 'py-1.5 rounded text-xs font-extrabold bg-white text-[#14241E] shadow-sm transition-all';
+        totalBtn.className = 'py-1.5 rounded text-xs font-bold text-[#5B6B62] transition-all';
+      }
+      renderRanking();
+    }
+
+    function renderRanking() {
+      const periodVal = document.getElementById('period-filter').value || 'all';
+      const stats = computePlayerStats(periodVal);
+      stats.sort((a, b) => currentSortMode === 'total' ? b.totalPt - a.totalPt : b.avgPt - a.avgPt);
+
+      const container = document.getElementById('ranking-list');
+      if (stats.length === 0) {
+        container.innerHTML = `<div class="cafe-card p-6 text-center text-xs text-[#5B6B62]">まだ対局データがありません</div>`;
+        return;
+      }
+
+      const medals = ['', '', ''];
+      container.innerHTML = stats.map((st, idx) => {
+        const meta = getPlayerMeta(st.name);
+        const rankBadge = `<span class="font-en text-xl font-bold ${idx < 3 ? 'text-[#D9472B]' : 'text-[#5B6B62]'}">${idx + 1}</span>`;
+        const mainVal = currentSortMode === 'total' ? st.totalPt : st.avgPt;
+        const sign = mainVal > 0 ? '+' : '';
+        const ptColor = mainVal >= 0 ? 'text-[#2E7D5B]' : 'text-[#D9472B]';
+
+        return `
+          <div onclick="openPlayerProfile('${st.name}')" class="cafe-card p-3 flex items-center justify-between cursor-pointer hover:bg-[#FBF6EA] transition-all">
+            <div class="flex items-center gap-2.5">
+              <div class="w-7 text-center">${rankBadge}</div>
+              <div class="w-9 h-9 rounded-md bg-[#F2C230] border border-[#C9B998] flex items-center justify-center text-lg">
+                ${meta.icon}
+              </div>
+              <div>
+                <div class="flex items-center gap-1.5">
+                  <span class="text-sm font-extrabold text-[#14241E]">${st.name}</span>
+                  <span class="text-xs px-1.5 py-0.5 rounded-md bg-[#E9DFC8] text-[#4B5A52] font-bold">${meta.badge}</span>
+                </div>
+                <div class="text-xs text-[#5B6B62]">
+                  ${st.games}戦 / 平均着順 ${st.avgRank} (${st.ranks.join('-')})
+                </div>
+              </div>
+            </div>
+            <div class="text-right">
+              <div class="text-base font-extrabold ${ptColor}">${sign}${mainVal.toFixed(1)}<span class="text-xs">pt</span></div>
+              <div class="text-xs text-[#5B6B62]">${currentSortMode === 'total' ? `平均 ${st.avgPt > 0 ? '+' : ''}${st.avgPt.toFixed(1)}` : `合計 ${st.totalPt > 0 ? '+' : ''}${st.totalPt.toFixed(1)}`}</div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function renderLogs() {
+      const container = document.getElementById('logs-list');
+      if (appData.gameLogs.length === 0) {
+        container.innerHTML = `<div class="cafe-card p-6 text-center text-xs text-[#5B6B62]">まだ対局ログがありません</div>`;
+        return;
+      }
+
+      container.innerHTML = appData.gameLogs.map(log => {
+        const videoBtn = log.videoUrl
+          ? `<a href="${log.videoUrl}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-[#2E7D5B] text-white text-xs font-extrabold shadow-sm hover:opacity-90">
+               <span> 対局動画を見る</span>
+             </a>`
+          : `<span class="text-xs font-bold text-[#5B6B62] bg-[#E9DFC8] px-2 py-0.5 rounded-full">通常卓</span>`;
+
+        const adminEditVideoBtn = adminPasswordCache
+          ? `<button onclick="promptVideoUrlEdit(${log.id}, '${log.videoUrl || ''}')" class="text-xs text-[#5B6B62] underline ml-2">動画URL編集</button>`
+          : '';
+
+        const rows = log.results.map(r => {
+          const sign = r.pt > 0 ? '+' : '';
+          const ptClass = r.pt >= 0 ? 'text-[#2E7D5B]' : 'text-[#D9472B]';
+          const chomboBadge = r.chombo > 0 ? `<span class="text-xs px-1.5 py-0.5 rounded bg-[#FFE3E3] text-[#B93A22] font-bold">反則▲${r.chombo * 20}</span>` : '';
+          return `
+            <div onclick="openPlayerProfile('${r.name}')" class="flex items-center justify-between text-xs py-1.5 border-b border-dashed border-[#D8CCB0] last:border-none cursor-pointer hover:bg-[#F4EBD9]/40 px-1 rounded">
+              <div class="flex items-center gap-1.5">
+                <span class="w-5 h-5 rounded-md bg-[#F2C230] font-extrabold text-[#14241E] inline-flex items-center justify-center">${r.rank}</span>
+                <span class="text-[#5B6B62] font-bold">[${r.wind}]</span>
+                <span class="font-extrabold text-[#14241E]">${r.name}</span>
+                ${chomboBadge}
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="text-[#5B6B62]">${r.score.toLocaleString()}点</span>
+                <span class="font-extrabold w-14 text-right ${ptClass}">${sign}${r.pt.toFixed(1)}pt</span>
+              </div>
+            </div>
+          `;
+        }).join('');
+
+        return `
+          <div class="cafe-card p-3.5 space-y-2">
+            <div class="flex items-center justify-between flex-wrap gap-1">
+              <div>
+                <div class="text-xs font-extrabold text-[#14241E]">${log.dateLabel}</div>
+                <div class="text-xs text-[#5B6B62]">${log.umaLabel}</div>
+              </div>
+              <div class="flex items-center">
+                ${videoBtn}
+                ${adminEditVideoBtn}
+              </div>
+            </div>
+            <div class="bg-[#FBF6EA] rounded-md p-2 border border-[#D8CCB0]">
+              ${rows}
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function promptVideoUrlEdit(gameId, currentUrl) {
+      const nextUrl = prompt('この対局のYouTube動画URLを入力してください（空欄で削除）：', currentUrl);
+      if (nextUrl === null) return;
+      if (isGasEnv) {
+        setLoading(true);
+        google.script.run
+          .withSuccessHandler(data => {
+            setLoading(false);
+            appData = data;
+            renderLogs();
+          })
+          .withFailureHandler(err => {
+            setLoading(false);
+            alert(err.message || err);
+          })
+          .updateVideoUrl({ password: adminPasswordCache, gameId, videoUrl: nextUrl.trim() });
+      } else {
+        const target = appData.gameLogs.find(g => g.id === gameId);
+        if (target) {
+          target.videoUrl = nextUrl.trim();
+          target.hasVideo = Boolean(target.videoUrl);
+          saveLocalFallback();
+          renderLogs();
+        }
+      }
+    }
+
+    function openPlayerProfile(name) {
+      const sel = document.getElementById('profile-player-select');
+      sel.value = name;
+      renderProfile(name);
+      switchTab('profile');
+    }
+
+    function renderProfile(forcedName) {
+      const stats = computePlayerStats('all');
+      const sel = document.getElementById('profile-player-select');
+      const targetName = forcedName || sel.value || (stats[0] && stats[0].name);
+
+      if (stats.length === 0) return;
+      sel.innerHTML = stats.map(s => `<option value="${s.name}" ${s.name === targetName ? 'selected' : ''}>${s.name}（${s.games}戦）</option>`).join('');
+
+      const st = stats.find(s => s.name === targetName) || stats[0];
+      const meta = getPlayerMeta(st.name);
+
+      document.getElementById('prof-avatar').textContent = meta.icon;
+      document.getElementById('prof-name').textContent = st.name;
+      document.getElementById('prof-badge').textContent = meta.badge;
+
+      const sign = st.totalPt > 0 ? '+' : '';
+      const ptEl = document.getElementById('prof-total-pt');
+      ptEl.textContent = `${sign}${st.totalPt.toFixed(1)}pt`;
+      ptEl.className = 'text-xl font-extrabold ' + (st.totalPt >= 0 ? 'text-[#2E7D5B]' : 'text-[#D9472B]');
+
+      document.getElementById('prof-games').textContent = `${st.games}戦`;
+      document.getElementById('prof-avg-rank').textContent = st.avgRank;
+      document.getElementById('prof-avg-score').textContent = st.avgScore.toLocaleString();
+      document.getElementById('prof-rentai').textContent = `${st.rentai}%`;
+      document.getElementById('prof-avg-pt').textContent = `${st.avgPt > 0 ? '+' : ''}${st.avgPt.toFixed(1)}pt`;
+      document.getElementById('prof-max-score').textContent = `${st.maxScore.toLocaleString()}点`;
+      document.getElementById('prof-rank-counts').textContent = st.ranks.join(' - ');
+
+      const colors = ['bg-[#FCC419]', 'bg-[#74C0FC]', 'bg-[#B197FC]', 'bg-[#FFA8A8]'];
+      document.getElementById('prof-rank-bar').innerHTML = st.ranks.map((cnt, i) => {
+        const pct = (cnt / st.games) * 100;
+        return pct > 0 ? `<div class="${colors[i]} h-full" style="width:${pct}%"></div>` : '';
+      }).join('');
+
+      document.getElementById('share-text-content').textContent =
+        `【麻雀かふぇ キャナリィ 連盟公式ルール練習会】
+${st.name}の成績カルテ
+・通算：${sign}${st.totalPt.toFixed(1)}pt（${st.games}戦 / 平均${st.avgPt > 0 ? '+' : ''}${st.avgPt.toFixed(1)}pt）
+・平均着順：${st.avgRank}（${st.ranks.join('-')}）
+・平均素点：${st.avgScore.toLocaleString()}点（最高${st.maxScore.toLocaleString()}点）
+#キャナリィ練習会 #日本プロ麻雀連盟 #一宮`;
+
+      // 個人の直近対局履歴
+      const myLogs = [];
+      appData.gameLogs.forEach(g => {
+        const found = g.results.find(r => r.name === st.name);
+        if (found) {
+          myLogs.push({ dateLabel: g.dateLabel, videoUrl: g.videoUrl, ...found });
+        }
+      });
+
+      const recentEl = document.getElementById('prof-recent-logs');
+      recentEl.innerHTML = myLogs.slice(0, 8).map(item => {
+        const pSign = item.pt > 0 ? '+' : '';
+        const pColor = item.pt >= 0 ? 'text-[#2E7D5B]' : 'text-[#D9472B]';
+        const vIcon = item.videoUrl ? `<a href="${item.videoUrl}" target="_blank" class="text-xs text-[#2E7D5B] font-bold underline ml-1">動画</a>` : '';
+        return `
+          <div class="flex items-center justify-between text-xs py-1.5 px-2 rounded bg-[#FBF6EA] border border-[#D8CCB0]">
+            <div>
+              <span class="font-bold text-[#14241E]">${item.dateLabel}</span>
+              <span class="text-[#5B6B62] ml-1">[${item.wind}・${item.rank}着]</span>
+              ${vIcon}
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-[#5B6B62]">${item.score.toLocaleString()}点</span>
+              <span class="font-extrabold ${pColor}">${pSign}${item.pt.toFixed(1)}pt</span>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function copyShareText() {
+      const text = document.getElementById('share-text-content').textContent;
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(text).then(() => {
+          const msg = document.getElementById('copy-status-msg');
+          msg.textContent = ' コピーしました！そのままXに貼り付けて投稿できます';
+          msg.className = 'font-extrabold text-[#2E7D5B]';
+          setTimeout(() => {
+            msg.textContent = ' 戦績テキストプレビュー：';
+            msg.className = 'font-bold text-[#5B6B62]';
+          }, 3000);
+        });
+      }
+    }
+
+    function setLoading(flag) {
+      const bar = document.getElementById('loading-bar');
+      if (flag) bar.classList.remove('hidden');
+      else bar.classList.add('hidden');
+    }
+
+    function saveLocalFallback() {
+      try {
+        localStorage.setItem('canary_mahjong_app_data_v1', JSON.stringify(appData));
+      } catch (e) { }
+    }
+
+    function loadLocalFallback() {
+      try {
+        const raw = localStorage.getItem('canary_mahjong_app_data_v1');
+        if (raw) {
+          appData = JSON.parse(raw);
+        }
+      } catch (e) { }
+    }
+
+    // 初期化処理
+    window.addEventListener('DOMContentLoaded', () => {
+      // 今日の日付をセット
+      const today = new Date();
+      const yyyy = today.getFullYear();
+      const mm = String(today.getMonth() + 1).padStart(2, '0');
+      const dd = String(today.getDate()).padStart(2, '0');
+      document.getElementById('game-date-input').value = `${yyyy}-${mm}-${dd}`;
+
+      buildSeatInputsUI();
+
+      if (isGasEnv) {
+        setLoading(true);
+        google.script.run
+          .withSuccessHandler(data => {
+            setLoading(false);
+            if (data && (data.players.length > 0 || data.gameLogs.length > 0 || data.liveState)) {
+              appData = data;
+            }
+            initRenderAll();
+          })
+          .withFailureHandler(() => {
+            setLoading(false);
+            initRenderAll();
+          })
+          .getAppData();
+      } else {
+        loadLocalFallback();
+        initRenderAll();
+      }
+    });
+
+    // 残り時間は20秒ごと、閲覧者の卓状況は60秒ごとに自動更新
+    setInterval(updateTimersOnly, 20000);
+    setInterval(autoRefreshTick, 60000);
+
+    function initRenderAll() {
+      populatePlayerSelects();
+      populatePeriodFilter();
+      recalcOfficialPoints();
+      renderLiveStatus();
+      renderRanking();
+      renderLogs();
+      renderProfile();
+    }
+  </script>
+</body>
+
+</html>
