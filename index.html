@@ -1217,6 +1217,8 @@
       const [h, m] = String(t.startTime).trim().split(':').map(Number);
       const start = new Date();
       start.setHours(h, m, 0, 0);
+      // 開始時刻が1時間以上「先」になる場合は、前日に始まった（日付をまたいだ）とみなす
+      if (start.getTime() - Date.now() > 60 * 60000) start.setDate(start.getDate() - 1);
       const elapsedMin = Math.max(0, (Date.now() - start.getTime()) / 60000);
       const remain = Math.ceil(HANCHAN_LIMIT_MIN - elapsedMin);
       const pct = Math.min(100, (elapsedMin / HANCHAN_LIMIT_MIN) * 100);
